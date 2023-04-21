@@ -1,0 +1,128 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.NavBar{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    /* gap: 791px; */
+
+    position: absolute;
+    width: 1300px;
+    height: 44px;
+    left: 70px;
+    top: 40px;
+
+}
+
+img{
+    width: 199px;
+    height: 39px;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 19.29px;
+
+    width: 385.29px;
+    height: 25px;
+    border-bottom: #FFFFFF 1px solid;
+}
+
+.search input{
+    background-color: transparent;
+    border: none;
+    width:456.43px;
+    /* border-bottom: #FFFFFF; */
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+
+    width: 221px;
+    height: 44px;
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 0px;
+    gap: 8px;
+    /* background-color: transparent; */
+    width: 55px;
+    height: 44px;
+
+    /* border-radius: 74px; */
+}
+
+.login button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+
+    /* text */
+
+    color: #FFFFFF;
+}
+
+.signup{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* padding: 10px 32px; */
+    gap: 8px;
+
+    width: 136px;
+    height: 44px;
+
+    /* primary */
+
+    /* background: #FF9800; */
+    /* border-radius: 74px; */
+}
+
+.signup button{
+    background: #FF9800;
+    padding: 10px 32px;
+    border-radius: 74px;
+    border:none;
+    /* width: 72px; */
+    /* height: 24px; */
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+
+/* background */
+
+color: #303030;
+}
