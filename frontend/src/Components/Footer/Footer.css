@@ -1,9 +1,11 @@
 .footer{
     /* position: absolute; */
-    width: 1440px;
-    height: 376px;
-    left: 0px;
-    top: 1789px;
+    position: absolute;
+width: 1440px;
+height: 376px;
+left: 0px;
+top: 1789px;
+background-color: #1C1C1C;
 }
 
 .footerTextIcon{
@@ -11,7 +13,7 @@
     width: 260px;
     height: 51px;
     left: 70px;
-    top: 1837px;
+    top: 48px;
 }
 
 .footerTextHeading{
@@ -19,7 +21,7 @@
     width: 640px;
     height: 124px;
     left: 70px;
-    top: 1908px;
+    top: 119px;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -37,7 +39,7 @@
     width: 377.85px;
     height: 110px;
     left: 992px;
-    top: 1888px;
+    top: 90px;
 }
 
 .downloadText{
@@ -100,7 +102,7 @@
     width: 1300px;
     height: 40px;
     left: 70px;
-    top: 2061px;
+    top: 272px;
 }
 
 .copyrightText{

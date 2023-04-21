@@ -1,0 +1,163 @@
+.videoPodcast{
+    /* position: absolute; */
+    width: 526.04px;
+    height: 575px;
+    left: 144px;
+    top: 1065px;
+
+    /* background */
+
+    background: #303030;
+    border-radius: 10.4167px;
+}
+
+.videoImage img{
+    position: absolute;
+    width: 526.04px;
+    height: 248.96px;
+    left: 626.87px;
+    top: 0px;
+}
+
+.videoText{
+    position: absolute;
+    width: 465px;
+    height: 278px;
+    left: 20px;
+    top: 254px;
+}
+
+.videoCategory{
+    position: relative;
+    width: 214px;
+    height: 20px;
+    top: 15px;
+    left: 626.87px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    /* text */
+
+    opacity: 0.8;
+    color: #FFFFFF;
+}
+
+.videoHeading{
+    position: relative;
+    width: 465px;
+    height: 117px;
+    left: 626.87px;
+    top: 30px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* text */
+
+    color: #FFFFFF;
+
+}
+
+.videoSubheading{
+    position: relative;
+    width: 465px;
+    height: 66px;
+    top: 40px;
+    left: 626.87px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+    display: flex;
+    align-items: center;
+
+    /* text */
+
+    color: #FFFFFF;
+
+    opacity: 0.8;
+}
+
+.videoPodcastCreator{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 153px;
+
+    position: relative;
+    width: 465px;
+    height: 36px;
+    left: 626.87px;
+    top: 60px;
+    /* bottom: 20px; */
+}
+
+.creatorName{
+    width: 211px;
+    height: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    /* text */
+
+    color: #FFFFFF;
+
+    opacity: 0.8;
+}
+
+.creatorName svg{
+    margin-right: 10px;
+}
+
+.creatorTime{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    width: 81px;
+    height: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    /* text */
+
+    color: #FFFFFF;
+    opacity: 0.8;
+}

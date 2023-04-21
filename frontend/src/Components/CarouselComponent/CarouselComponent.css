@@ -1,0 +1,17 @@
+.elementsOfCarousel{
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.audioCard, .videoCard{
+    /* position: absolute; */
+    width: 526.04px;
+    height: 575px;
+    left: 144px;
+    top: 1065px;
+
+    /* background */
+
+    background-color: #303030;
+    border-radius: 10.4167px;
+}
