@@ -16,6 +16,7 @@ export default function HomeHeader() {
             </div>
         </div>
         <div className="headerImage">
+            <img src="https://uploads-ssl.webflow.com/63a4333d6709521275441c77/6442b27e39465332e9c19c92_Group%20108.png" alt="" />
         </div>
     </div>
   )

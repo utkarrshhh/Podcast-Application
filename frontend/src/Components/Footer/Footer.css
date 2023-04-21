@@ -1,0 +1,127 @@
+.footer{
+    /* position: absolute; */
+    width: 1440px;
+    height: 376px;
+    left: 0px;
+    top: 1789px;
+}
+
+.footerTextIcon{
+    position: absolute;
+    width: 260px;
+    height: 51px;
+    left: 70px;
+    top: 1837px;
+}
+
+.footerTextHeading{
+    position: absolute;
+    width: 640px;
+    height: 124px;
+    left: 70px;
+    top: 1908px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* or 150% */
+
+
+    color: #FFFFFF;
+}
+
+.footerDownload{
+    position: absolute;
+    width: 377.85px;
+    height: 110px;
+    left: 992px;
+    top: 1888px;
+}
+
+.downloadText{
+    /* position: absolute; */
+    width: 141px;
+    height: 30px;
+    left: 992px;
+    top: 1888px;
+    margin-bottom: 30px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+
+
+    color: #FFFFFF;
+}
+
+.downloadImage{
+    display: flex;
+    /* position: absolute; */
+    width: 377.85px;
+    height: 50px;
+    left: 992px;
+    top: 1948px;
+    justify-content: space-between;
+
+}
+
+.appStore img{
+    width: 179.67px;
+    height: 50px;
+    left: 992px;
+    top: 1948px;
+
+    /* background: url(image.png); */
+    border-radius: 6px;
+}
+
+.googlePlay img{
+    /* position: absolute; */
+    width: 181.17px;
+    height: 50px;
+    left: 1188.68px;
+    top: 1948px;
+}
+
+.copyright{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    /* gap: 909px; */
+
+    position: absolute;
+    width: 1300px;
+    height: 40px;
+    left: 70px;
+    top: 2061px;
+}
+
+.copyrightText{
+    width: 626px;
+    height: 30px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+
+    color: #FFFFFF;
+    /* display: flex; */
+}
+
+.copyrightImage{
+    display: flex;
+    /* displ */
+    width: 187.58px;
+    height: 40px;
+    justify-content: space-between;
+}

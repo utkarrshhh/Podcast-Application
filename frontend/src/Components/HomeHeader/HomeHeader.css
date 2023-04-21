@@ -1,5 +1,15 @@
-.headingText{
+.HomeHeader{
+    display: flex;
     position: absolute;
+    width: 1300px;
+    height: 576.32px;
+    left: 70px;
+    top: 176px;
+    
+}
+
+.headingText{
+    /* position: absolute; */
     width: 640px;
     height: 414px;
     left: 70px;
@@ -14,7 +24,7 @@
     /* flex-direction: row; */
     align-items: center;
 
-    /* color: #FFFFFF; */
+    color: #FFFFFF;
 }
 
 .headerButton{
@@ -24,7 +34,7 @@
     padding: 0px;
     gap: 25.11px;
 
-    position: absolute;
+    /* position: absolute; */
     width: 500.47px;
     height: 56.11px;
     left: 70px;
@@ -58,6 +68,8 @@
     align-items: center;
     text-align: center;
     text-transform: capitalize;
+
+    margin-top: 10px;
 
     /* text */
 
@@ -100,4 +112,18 @@
     /* background */
 
     color: #303030;
+}
+
+.headerImage{
+    /* position: relative; */
+    left: 838.06px;
+    top: 176px;
+}
+
+.headerImage img{
+    /* position: relative; */
+    width: 531.94px;
+    height: 545.08px;
+    left: 838.06px;
+    top: 176px;
 }

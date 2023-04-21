@@ -1,0 +1,7 @@
+.home{
+    background-image: url("../../Assests/Landing\ Page.png");
+    /* background-repeat: no-repeat; */
+    width: 1440px;
+    height: 2165px;
+    background-size: cover;
+}
