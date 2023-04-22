@@ -51,7 +51,7 @@ img{
     height: 44px;
 }
 
-.login{
+.loginNav{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -64,7 +64,7 @@ img{
     /* border-radius: 74px; */
 }
 
-.login button{
+.loginNav button{
     background-color: transparent;
     border: none;
     color: white;
@@ -81,6 +81,12 @@ img{
     /* text */
 
     color: #FFFFFF;
+    cursor: pointer;
+    /* text-decoration: none; */
+}
+
+a{
+    text-decoration: none;
 }
 
 .signup{
@@ -119,5 +125,6 @@ img{
 
 /* background */
 
-color: #303030;
+    cursor: pointer;
+    color: #303030;
 }

@@ -1,0 +1,205 @@
+.SignUpHeader{
+    width: 1300px;
+    height: 526px;
+    margin-left: 70px;
+    padding-top: 127px;
+    background: linear-gradient(98.05deg, #303030 -89.33%, rgba(48, 48, 48, 0) 98%);
+    border-radius: 10px;
+    border: none;
+    display: flex;
+}
+
+.signUpLeft{
+    width: 498px;
+    height: 421.67px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.signUpRight{
+    width: 544px;
+    height: 446px;
+    margin-left: 158px;
+    margin-top: 40px;
+}
+
+.signUpRHeading{
+    width: 544px;
+    height: 59px;
+    /* margin-left: 158px; */
+    /* top: 167px; */
+
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 59px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    /* secondary */
+
+    color: #00BCD4;
+}
+
+.signUpRInputs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+
+    /* position: absolute; */
+    width: 527px;
+    height: 402px;
+    /* left: 110px; */
+    margin-top: 30px;
+}
+
+.signUpEmail{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 0px; */
+    gap: 10px;
+
+    /* position: absolute; */
+    width: 527px;
+    height: 86px;
+    /* left: 0px; */
+    /* top: 0px; */
+}
+
+.signUpPassword{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 0px; */
+    gap: 10px;
+
+    /* position: absolute; */
+    width: 527px;
+    height: 86px;
+    /* left: 0px; */
+    /* margin-top: 25px; */
+}
+
+/* .signUpForgotPassword{
+    width: 404.69px;
+    height: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+} */
+
+.signUpPageLButtons{
+    width: 527px;
+    height: 130px;
+    /* margin-top: 30px; */
+}
+
+.signUpInputEmailLabel,.signUpInputPasswordLabel{
+    width: 58px;
+    height: 24px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    /* text */
+
+    color: #FFFFFF;
+}
+
+#signUpInputEmail,#signUpInputPassword{
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 10px;
+    margin-top: 10px;
+    width: 527px;
+    height: 52px;
+
+    /* background */
+
+    background: #303030;
+    border: 0.5px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+.signUpPageSignUpButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+
+    /* position: absolute; */
+    width: 527px;
+    height: 50px;
+    /* left: 0px; */
+    /* top: 272px; */
+
+    /* primary */
+
+    background: #FF9800;
+    border-radius: 5px;
+    border: none;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    /* background */
+
+    color: #303030;
+}
+
+.signUpPageSignUpGoogle{
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 10px;
+
+    /* position: absolute; */
+    width: 527px;
+    height: 50px;
+    /* left: 0px; */
+    margin-top: 30px;
+
+    /* background */
+
+    background: #303030;
+    /* text */
+
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+}

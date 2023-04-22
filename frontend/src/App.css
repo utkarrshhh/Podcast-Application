@@ -1,6 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* @import url('../public/fonts/index.css'); */
 
 *{
     padding: 0px;
     margin: 0px;
+}
+
+.home{
+    background-image: url("./Assests/Landing\ Page.png");
+    /* background-repeat: no-repeat; */
+    width: 1440px;
+    height: 1789px;
+    background-size: cover;
+}
+
+.login,.signUp{
+    background-image: url("./Assests/Landing\ Page.png");
+    background-size: cover;
+    width: 1440px;
+    height: 750px;
 }

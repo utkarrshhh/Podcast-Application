@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, NavLink } from "react-router-dom";
 
 import "./NavBar.css"
 
@@ -15,11 +16,15 @@ export default function NavBar() {
             <input type="text" placeholder='Start looking for the best podcasts'/>
         </div>
         <div className="buttons">
-            <div className="login">
-                <button>Login</button>
+            <div className="loginNav">
+                <Link to="login">
+                    <button>Login</button>
+                </Link>
             </div>
             <div className="signup">
-                <button>Signup</button>
+                <Link to="signup">
+                    <button>Signup</button>
+                </Link>
             </div>
         </div>
     </div>
