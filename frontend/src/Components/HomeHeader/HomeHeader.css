@@ -1,21 +1,27 @@
 .HomeHeader{
     display: flex;
-    position: absolute;
-    width: 1300px;
-    height: 576.32px;
-    left: 70px;
-    top: 176px;
-    background: none;
-    
+    /* position: absolute; */
+    width: 90.278%;
+    height: 32.215%;
+    margin-left: 4.86%;
+    margin-top: 5.14%;
+    background: none;   
+}
+
+.headerText{
+    width: 49.231%;
+    height: 92.348%;
+    margin-top: 3.393%;
 }
 
 .headingText{
     /* position: absolute; */
-    width: 640px;
+    /* width: 640px;
     height: 414px;
     left: 70px;
-    top: 220.1px;
-
+    top: 220.1px; */
+    width: 100%;
+    height: 77.789%;
     font-family: 'Clash Display';
     font-style: normal;
     font-weight: 500;
@@ -33,14 +39,12 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
     gap: 25.11px;
 
     /* position: absolute; */
-    width: 500.47px;
-    height: 56.11px;
-    left: 70px;
-    top: 696.2px;
+    width: 78.199%;
+    height: 10.544%;
+    margin-top: 9.704%;
 
     background: none;
 }
@@ -50,10 +54,11 @@
     flex-direction: row;
     align-items: flex-start;
     /* padding: 12.5564px 0px; */
-    gap: 10.05px;
+    /* gap: 10.05px;
     width: 212px;
-    height: 56.11px;
-
+    height: 56.11px; */
+    gap: 10.05px;
+    width: 42.361%;
     /* border-radius: 92.9173px; */
     background: none;
 }
@@ -66,17 +71,11 @@
     font-weight: 400;
     font-size: 25.1128px;
     line-height: 31px;
-    /* identical to box height */
-
     display: flex;
     align-items: center;
     text-align: center;
     text-transform: capitalize;
-
-    margin-top: 10px;
-
-    /* text */
-
+    /* margin-top: 10px; */
     color: #FFFFFF;
     background: none;
 }
@@ -86,15 +85,11 @@
     flex-direction: row;
     align-items: flex-start;
     /* padding: 12.5564px 40.1805px; */
-    gap: 10.05px;
-
+    /* gap: 10.05px;
     width: 263.36px;
-    height: 56.11px;
-
-    /* primary */
-
-    /* background: #FF9800; */
-    /* border-radius: 92.9173px; */
+    height: 56.11px; */
+    gap: 10.05px;
+    width: 52.624%;
     background: none;
 }
 
@@ -108,22 +103,18 @@
     font-weight: 500;
     font-size: 25.1128px;
     line-height: 31px;
-    /* identical to box height */
-
     display: flex;
     align-items: center;
     text-align: center;
     text-transform: capitalize;
-
-    /* background */
-
     color: #303030;
 }
 
 .headerImage{
     /* position: relative; */
-    left: 838.06px;
-    top: 176px;
+    margin-left: 9.8507%;
+    width: 40.919%;
+    height: 94.58%;
     background: none;
 }
 
