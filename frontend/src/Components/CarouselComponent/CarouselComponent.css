@@ -15,3 +15,43 @@
     background-color: #303030;
     border-radius: 10.4167px;
 }
+
+.slick-prev{
+    margin-left: 1096px;
+    z-index: 5;
+    margin-top: 310.42px;
+}
+
+.slick-prev:before,.slick-next:before{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    font-family: "Montserrat" ;
+
+    /* position: absolute; */
+    width: 40px;
+    height: 40px;
+    /* left: 1240px; */
+    /* top: 1660px; */
+
+    background: rgba(48, 48, 48, 0.5);
+    border-radius: 50px;
+}
+
+.slick-prev:before{
+    content: "<";
+
+}
+
+.slick-next:before{
+    content: ">";
+}
+
+.slick-next{
+    margin-left: 10px;
+    z-index: 5;
+    margin-top: 310.42px;
+}
