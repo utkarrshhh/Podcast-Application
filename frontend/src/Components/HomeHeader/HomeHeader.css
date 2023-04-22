@@ -1,20 +1,23 @@
-.HomeHeader{
+.HomeHeader {
     display: flex;
+    align-items: bottom;
+    /* justify-content: space-around; */
     /* position: absolute; */
-    width: 90.278%;
+    width: 80%;
     height: 32.215%;
-    margin-left: 4.86%;
-    margin-top: 5.14%;
-    background: none;   
+    margin: 0 auto;
+    /* margin-left: 4.86%; */
+    /* margin-top: 5.14%; */
+    background: none;
 }
 
-.headerText{
+.headerText {
     width: 49.231%;
     height: 92.348%;
-    margin-top: 3.393%;
+    margin-top: 10%;
 }
 
-.headingText{
+.headingText {
     /* position: absolute; */
     /* width: 640px;
     height: 414px;
@@ -30,26 +33,24 @@
     display: flex;
     /* flex-direction: row; */
     align-items: center;
-
     color: #FFFFFF;
     background: none;
 }
 
-.headerButton{
+.headerButton {
     display: flex;
+    align-items: center;
     flex-direction: row;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     gap: 25.11px;
-
     /* position: absolute; */
     width: 78.199%;
     height: 10.544%;
     margin-top: 9.704%;
-
     background: none;
 }
 
-.explorePodcastButton{
+.explorePodcastButton {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -63,7 +64,7 @@
     background: none;
 }
 
-.explorePodcastButton button{
+.explorePodcastButton button {
     background-color: transparent;
     border: none;
     font-family: 'Montserrat';
@@ -80,7 +81,7 @@
     background: none;
 }
 
-.startListeningButton{
+.startListeningButton {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -93,14 +94,14 @@
     background: none;
 }
 
-.startListeningButton button{
+.startListeningButton button {
     background: #FF9800;
     padding: 10px 32px;
     border-radius: 74px;
-    border:none;
+    border: none;
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 25.1128px;
     line-height: 31px;
     display: flex;
@@ -110,19 +111,28 @@
     color: #303030;
 }
 
-.headerImage{
+.headerImage {
     /* position: relative; */
     margin-left: 9.8507%;
-    width: 40.919%;
+    width: 50%;
     height: 94.58%;
     background: none;
 }
 
-.headerImage img{
+.headerImage img {
     /* position: relative; */
-    width: 531.94px;
-    height: 545.08px;
-    left: 838.06px;
-    top: 176px;
-    background: none;
+    width: 100%;
+    height: auto;
+}
+
+.blue {
+    color: #00BCD4;
+}
+
+.yellow {
+    color: #FF9800;
+}
+
+.no-flex {
+    display: block;
 }

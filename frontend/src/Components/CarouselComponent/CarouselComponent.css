@@ -1,61 +1,62 @@
-.elementsOfCarousel{
+.elementsOfCarousel {
     display: flex !important;
     justify-content: space-between;
 }
 
-.audioCard, .videoCard{
+img {
+    border-radius: 10px;
+}
+
+.audioCard,
+.videoCard {
     /* position: absolute; */
     width: 526.04px;
     height: 575px;
     left: 144px;
     top: 1065px;
-
     /* background */
-
     background-color: #303030;
-    border-radius: 10.4167px;
+    border-radius: 10px;
 }
 
-.slick-prev{
+.slick-prev {
     margin-left: 1096px;
     z-index: 5;
     margin-top: 310.42px;
 }
 
-.slick-prev:before,.slick-next:before{
+.slick-prev:before,
+.slick-next:before {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 8px;
     gap: 8px;
-    font-family: "Clash Display" ;
-
+    font-family: "Clash Display";
     /* position: absolute; */
     width: 40px;
     height: 40px;
     /* left: 1240px; */
     /* top: 1660px; */
-
     background: rgba(48, 48, 48, 0.5);
     border-radius: 50px;
 }
 
-.slick-prev:before{
+.slick-prev:before {
     content: "<";
-
 }
 
-.slick-next:before{
+.slick-next:before {
     content: ">";
 }
 
-.slick-next{
+.slick-next {
     margin-left: 10px;
     z-index: 5;
     margin-top: 310.42px;
 }
 
-.slick-dots{
+.slick-dots {
     display: none !important;
 }

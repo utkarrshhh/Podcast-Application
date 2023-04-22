@@ -5,7 +5,7 @@ export default function HomeHeader() {
   return (
     <div className='HomeHeader'>
         <div className="headerText">
-            <div className="headingText">Listen your favorite audio & video podcasts in one place!</div>
+            <div className="headingText no-flex">Listen your favorite <span className="yellow">audio</span> & <span className="blue">video</span> podcasts in one place!</div>
             <div className="headerButton">
                 <div className="explorePodcastButton">
                     <button>Explore Podcasts</button>

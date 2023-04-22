@@ -1,55 +1,51 @@
-.LoginHeader{
+.LoginHeader {
     width: 1300px;
     height: 571px;
-    margin-left: 70px;
-    padding-top: 131px;
+    /* margin-left: 70px; */
+    margin: 50px auto;
+    /* padding-top: 131px; */
     background: linear-gradient(98.05deg, #303030 -89.33%, rgba(48, 48, 48, 0) 98%);
     border-radius: 10px;
     display: flex;
 }
 
-.loginLeft{
+.loginLeft {
     width: 527px;
     height: 491px;
     margin-left: 40px;
     margin-top: 40px;
 }
 
-.loginRight{
+.loginRight {
     width: 498px;
     height: 421.67px;
     margin-left: 175px;
     margin-top: 40px;
 }
 
-.loginLHeading{
+.loginLHeading {
     width: 503px;
     height: 59px;
     /* left: 110px; */
     /* top: 171px; */
-
     font-family: 'Clash Display';
     font-style: normal;
     font-weight: 500;
     font-size: 48px;
     line-height: 59px;
     /* identical to box height */
-
     display: flex;
     align-items: center;
-
     /* secondary */
-
     color: #00BCD4;
 }
 
-.loginLInputs{
+.loginLInputs {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
     gap: 30px;
-
     /* position: absolute; */
     width: 527px;
     height: 402px;
@@ -57,13 +53,12 @@
     margin-top: 30px;
 }
 
-.loginEmail{
+.loginEmail {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     /* padding: 0px; */
     gap: 10px;
-
     /* position: absolute; */
     width: 527px;
     height: 86px;
@@ -71,13 +66,12 @@
     /* top: 0px; */
 }
 
-.loginPassword{
+.loginPassword {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     /* padding: 0px; */
     gap: 10px;
-
     /* position: absolute; */
     width: 527px;
     height: 86px;
@@ -85,51 +79,44 @@
     /* margin-top: 25px; */
 }
 
-.loginForgotPassword{
+.loginForgotPassword {
     width: 404.69px;
     height: 20px;
     /* left: 0px; */
     /* margin-top: 25px; */
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     /* identical to box height */
-
-
     /* text */
-
     color: #FFFFFF;
 }
 
-.loginPageLButtons{
+.loginPageLButtons {
     width: 527px;
     height: 130px;
     /* margin-top: 30px; */
 }
 
-.loginInputEmailLabel,.loginInputPasswordLabel{
+.loginInputEmailLabel,
+.loginInputPasswordLabel {
     width: 58px;
     height: 24px;
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-
     /* text */
-
     color: #FFFFFF;
 }
 
-#loginInputEmail,#loginInputPassword{
+#loginInputEmail,
+#loginInputPassword {
     box-sizing: border-box;
-
     /* Auto layout */
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -138,68 +125,54 @@
     margin-top: 10px;
     width: 527px;
     height: 52px;
-
     /* background */
-
     background: #303030;
     border: 0.5px solid #FFFFFF;
     border-radius: 5px;
 }
 
-.loginPageLoginButton{
+.loginPageLoginButton {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 8px 16px;
     gap: 8px;
-
     /* position: absolute; */
     width: 527px;
     height: 50px;
     /* left: 0px; */
     /* top: 272px; */
-
     /* primary */
-
     background: #FF9800;
     border-radius: 5px;
     border: none;
-
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 24px;
     line-height: 29px;
-
     /* background */
-
     color: #303030;
 }
 
-.loginPageLoginGoogle{
+.loginPageLoginGoogle {
     box-sizing: border-box;
-
     /* Auto layout */
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 8px 16px;
     gap: 10px;
-
     /* position: absolute; */
     width: 527px;
     height: 50px;
     /* left: 0px; */
     margin-top: 30px;
-
     /* background */
-
     background: #303030;
     /* text */
-
     border: 1px solid #FFFFFF;
     border-radius: 5px;
     font-family: 'Montserrat';
@@ -207,11 +180,10 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-
     color: #FFFFFF;
 }
 
-.loginRight svg{
+.loginRight svg {
     width: 498px;
     height: 421.67px;
     /* margin-left: 60px; */
