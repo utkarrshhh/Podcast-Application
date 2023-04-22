@@ -1,20 +1,21 @@
-import React from 'react'
-import NavBar from "../Components/NavBar/NavBar"
-import HomeHeader from "../Components/HomeHeader/HomeHeader"
-import Carousel from "../Components/Carousel/Carousel"
-
-// import Footer from '../Components/Footer/Footer'
-
-// import {audio} from "../../Data/audio.js"
-
+import React from "react";
+import NavBarHome from "../Components/NavBar/NavBarHome";
+import SideBar from "../Components/NavBar/SideBar";
+import "./Home.css";
+import NowPlaying from "../Components/NowPlayingComponent/NowPlaying";
 export default function Home() {
   return (
-    <div className='home'>
-        <NavBar />
-        <HomeHeader/>
-        <Carousel/>
-        {/* <AudioPodcastCard/> */}
-        {/* <Footer/> */}
+    <div className="home">
+      <NavBarHome title="Ajay Khatri" />
+      <div className="flex">
+        <SideBar />
+        <div>
+          <div>
+            <h2>Now Playing</h2>
+            <NowPlaying/>
+          </div>
+        </div>
+      </div>
     </div>
-  )
+  );
 }

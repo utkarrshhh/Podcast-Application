@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import "./NavBar.css"
 
-export default function NavBar() {
+export default function NavBarHome(props) {
   return (
     <div className='NavBar'>
         <div className='logo'>
@@ -16,14 +16,9 @@ export default function NavBar() {
             <input type="text" placeholder='Start looking for the best podcasts'/>
         </div>
         <div className="buttons">
-            <div className="loginNav">
-                <Link to="/login">
-                    <button>Login</button>
-                </Link>
-            </div>
             <div className="signup">
-                <Link to="/signup">
-                    <button>Signup</button>
+                <Link to={'/'+props.title}>
+                    <button>{props.title}</button>
                 </Link>
             </div>
         </div>

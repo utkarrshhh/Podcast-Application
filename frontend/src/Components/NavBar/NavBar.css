@@ -1,4 +1,4 @@
-.NavBar{
+.NavBar {
     /* background-color: black; */
     display: flex;
     flex-direction: row;
@@ -6,7 +6,6 @@
     align-items: center;
     padding: 0px;
     /* gap: 791px; */
-
     /* position: absolute; */
     /* width: 1300px;
     height: 44px; */
@@ -14,46 +13,48 @@
     height: 2.45%;
     margin-left: 4.86%;
     padding-top: 2.23%;
-
 }
 
-img{
+img {
     width: 199px;
     height: 39px;
 }
 
-.search{
+.search {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0px;
     gap: 19.29px;
-
     width: 385.29px;
     height: 25px;
     border-bottom: #FFFFFF 1px solid;
 }
 
-.search input{
+.search input {
     background-color: transparent;
     border: none;
-    width:456.43px;
+    width: 456.43px;
     /* border-bottom: #FFFFFF; */
+    color: white;
 }
 
-.buttons{
+.search input:focus {
+    outline: none;
+}
+
+.buttons {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
     gap: 30px;
-
     width: 221px;
     height: 44px;
 }
 
-.loginNav{
+.loginNav {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -62,11 +63,10 @@ img{
     /* background-color: transparent; */
     width: 55px;
     height: 44px;
-
     /* border-radius: 74px; */
 }
 
-.loginNav button{
+.loginNav button {
     background-color: transparent;
     border: none;
     color: white;
@@ -79,42 +79,36 @@ img{
     align-items: center;
     text-align: center;
     text-transform: capitalize;
-
     /* text */
-
     color: #FFFFFF;
     cursor: pointer;
     /* text-decoration: none; */
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.signup{
+.signup {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     /* padding: 10px 32px; */
     gap: 8px;
-
-    width: 136px;
+    /* width: 136px; */
     height: 44px;
-
     /* primary */
-
     /* background: #FF9800; */
     /* border-radius: 74px; */
 }
 
-.signup button{
+.signup button {
     background: #FF9800;
     padding: 10px 32px;
     border-radius: 74px;
-    border:none;
+    border: none;
     /* width: 72px; */
     /* height: 24px; */
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -124,9 +118,7 @@ a{
     align-items: center;
     text-align: center;
     text-transform: capitalize;
-
-/* background */
-
+    /* background */
     cursor: pointer;
     color: #303030;
 }

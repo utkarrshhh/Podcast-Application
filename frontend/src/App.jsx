@@ -2,9 +2,10 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import NavBar from "./Components/NavBar/NavBar"
 import Footer from "./Components/Footer/Footer"
-import Home from "./Pages/Home"
+import LandingPage from "./Pages/LandingPage"
 import Login from "./Pages/Login"
 import SignUp from "./Pages/SignUp"
+import Home from "./Pages/Home"
 
 import "./App.css"
 
@@ -14,9 +15,11 @@ export default function App() {
       <BrowserRouter>
         {/* <NavBar /> */}
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<Login/>}/>
             <Route path="/signup" element={<SignUp/>}/>
+            <Route path="/home" element={<Home/>}/>
+
           </Routes>
           <Footer />
       </BrowserRouter>

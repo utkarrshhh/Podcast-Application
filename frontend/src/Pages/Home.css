@@ -1,0 +1,5 @@
+.flex {
+    padding-top: 100px;
+    display: flex;
+    gap: 30px;
+}

@@ -8,7 +8,7 @@ export default function Carousel() {
     <div className='carousel'>
         <div className="carouselHeading">
             <div className="carouselText">Popular podcasts in your area</div>
-            <div className="carouselViewAll">View All</div>
+            {/* <div className="carouselViewAll">View All</div> */}
         </div>
         <div className="carouselElemets">
             <CarouselComponent/>
