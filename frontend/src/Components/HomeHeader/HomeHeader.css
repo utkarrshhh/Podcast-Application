@@ -5,6 +5,7 @@
     height: 576.32px;
     left: 70px;
     top: 176px;
+    background: none;
     
 }
 
@@ -25,6 +26,7 @@
     align-items: center;
 
     color: #FFFFFF;
+    background: none;
 }
 
 .headerButton{
@@ -40,6 +42,7 @@
     left: 70px;
     top: 696.2px;
 
+    background: none;
 }
 
 .explorePodcastButton{
@@ -52,6 +55,7 @@
     height: 56.11px;
 
     /* border-radius: 92.9173px; */
+    background: none;
 }
 
 .explorePodcastButton button{
@@ -74,6 +78,7 @@
     /* text */
 
     color: #FFFFFF;
+    background: none;
 }
 
 .startListeningButton{
@@ -90,6 +95,7 @@
 
     /* background: #FF9800; */
     /* border-radius: 92.9173px; */
+    background: none;
 }
 
 .startListeningButton button{
@@ -118,6 +124,7 @@
     /* position: relative; */
     left: 838.06px;
     top: 176px;
+    background: none;
 }
 
 .headerImage img{
@@ -126,4 +133,5 @@
     height: 545.08px;
     left: 838.06px;
     top: 176px;
+    background: none;
 }

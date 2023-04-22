@@ -55,3 +55,7 @@
     z-index: 5;
     margin-top: 310.42px;
 }
+
+.slick-dots{
+    display: none !important;
+}

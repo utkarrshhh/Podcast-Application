@@ -23,6 +23,7 @@
     left: 40px;
     top: 34px;
 
+    background: none;
 }
 
 .carouselText{
@@ -42,6 +43,7 @@
     /* primary */
 
     color: #FF9800;
+    background: none;
 }
 
 .carouselViewAll{
@@ -59,6 +61,7 @@
     text-transform: capitalize;
     cursor: pointer;
     color: #FFFFFF;
+    background: none;
 }
 
 .carouselElemets{
@@ -68,5 +71,6 @@
     left: 74px;
     top: 145px;
 
+    background: none;
 /* background-color: red; */
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-// import NavBar from "../Components/NavBar/NavBar"
+import NavBar from "../Components/NavBar/NavBar"
 import HomeHeader from "../Components/HomeHeader/HomeHeader"
 import Carousel from "../Components/Carousel/Carousel"
 
@@ -10,7 +10,7 @@ import Carousel from "../Components/Carousel/Carousel"
 export default function Home() {
   return (
     <div className='home'>
-        {/* <NavBar /> */}
+        <NavBar />
         <HomeHeader/>
         <Carousel/>
         {/* <AudioPodcastCard/> */}

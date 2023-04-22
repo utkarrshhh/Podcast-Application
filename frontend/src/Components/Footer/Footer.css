@@ -1,11 +1,11 @@
 .footer{
     /* position: absolute; */
     /* position: absolute; */
-width: 1440px;
-height: 376px;
-left: 0px;
-top: 1789px;
-background-color: #1C1C1C;
+    width: 1440px;
+    height: 376px;
+    /* left: 0px; */
+    /* margin-top: 1789px; */
+    background-color: #1C1C1C;
 }
 
 .footerTop{
@@ -59,8 +59,8 @@ height: 195px;
     /* position: absolute; */
     width: 141px;
     height: 30px;
-    left: 992px;
-    top: 1888px;
+    /* left: 992px; */
+    /* top: 1888px; */
     margin-bottom: 30px;
 
     font-family: 'Montserrat';
@@ -79,8 +79,8 @@ height: 195px;
     /* position: absolute; */
     width: 377.85px;
     height: 50px;
-    left: 992px;
-    top: 1948px;
+    /* left: 992px; */
+    /* top: 1948px; */
     justify-content: space-between;
 
 }
@@ -88,8 +88,8 @@ height: 195px;
 .appStore img{
     width: 179.67px;
     height: 50px;
-    left: 992px;
-    top: 1948px;
+    /* left: 992px; */
+    /* top: 1948px; */
 
     /* background: url(image.png); */
     border-radius: 6px;
@@ -99,8 +99,8 @@ height: 195px;
     /* position: absolute; */
     width: 181.17px;
     height: 50px;
-    left: 1188.68px;
-    top: 1948px;
+    /* left: 1188.68px; */
+    /* top: 1948px; */
 }
 
 .copyright{
