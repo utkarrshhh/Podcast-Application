@@ -113,7 +113,6 @@
 #signUpInputEmail,
 #signUpInputPassword {
     box-sizing: border-box;
-    /* Auto layout */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -122,10 +121,13 @@
     margin-top: 10px;
     width: 527px;
     height: 52px;
-    /* background */
     background: #303030;
     border: 0.5px solid #FFFFFF;
     border-radius: 5px;
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 16px;
 }
 
 .signUpPageSignUpButton {
@@ -153,6 +155,11 @@
     color: #303030;
 }
 
+.signUpPageSignUpButton:hover {
+    background: #FFB74D;
+    cursor: pointer;
+}
+
 .signUpPageSignUpGoogle {
     box-sizing: border-box;
     /* Auto layout */
@@ -178,4 +185,9 @@
     font-size: 24px;
     line-height: 29px;
     color: #FFFFFF;
+}
+
+.signUpPageSignUpGoogle:hover {
+    background: #1c1c1c;
+    cursor: pointer;
 }
