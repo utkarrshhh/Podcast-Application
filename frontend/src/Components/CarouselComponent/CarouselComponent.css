@@ -1,6 +1,7 @@
 .elementsOfCarousel {
     display: flex !important;
     justify-content: space-between;
+    gap: 68.42px;
 }
 
 img {

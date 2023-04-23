@@ -4,6 +4,8 @@ import SideBar from "../Components/NavBar/SideBar";
 import "./Home.css";
 import ContinueWatching from "../Components/ContinueWatching/ContinueWatching";
 import NowPlaying from "../Components/NowPlayingComponent/NowPlaying";
+import BingeWorthy from "../Components/BingeWorthy/BingeWorthy";
+
 export default function Home() {
   return (
     <div className="home">
@@ -16,6 +18,8 @@ export default function Home() {
             <NowPlaying/>
             <div className="nowPlayingHeader">Pick Up Where You Left Off</div>
             <ContinueWatching/>
+            <div className="nowPlayingHeader" id="BW">Bingeworthy Podcasts</div>
+            <BingeWorthy/>
           </div>
         </div>
       </div>
