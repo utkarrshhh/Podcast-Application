@@ -19,6 +19,11 @@ img {
     border-radius: 10px;
 }
 
+.audioCard:hover,
+.videoCard:hover {
+    cursor: pointer;
+}
+
 .slick-prev {
     margin-left: 1096px;
     z-index: 5;
