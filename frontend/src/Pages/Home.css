@@ -5,7 +5,7 @@
 }
 
 .nowPlayingHeader{
-    width: 187px;
+    width: 414px;
     height: 39px;
     font-family: 'Clash Display';
     font-style: normal;
@@ -14,6 +14,6 @@
     line-height: 39px;
     display: flex;
     align-items: center;
-    margin-left: 24px;
+    /* margin-left: 30px; */
     color: #FF9800;
 }

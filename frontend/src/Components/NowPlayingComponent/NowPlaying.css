@@ -1,4 +1,4 @@
-.nowPlaying{
+.nowPlayingDiv{
     width: 1070px;
     height: 248px;
     background: linear-gradient(98.05deg, #303030 -89.33%, rgba(48, 48, 48, 0) 98%);
@@ -9,7 +9,7 @@
 .nowPlaying{
     width: 1016px;
     height: 200px;
-    margin-top: 24px;
+    padding-top: 24px;
     margin-left: 24px;
     display: flex;
 }
