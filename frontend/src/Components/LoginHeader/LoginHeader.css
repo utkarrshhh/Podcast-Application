@@ -129,6 +129,10 @@
     background: #303030;
     border: 0.5px solid #FFFFFF;
     border-radius: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 16px;
+    color: white;
 }
 
 .loginPageLoginButton {
@@ -156,6 +160,11 @@
     color: #303030;
 }
 
+.loginPageLoginButton:hover {
+    background: #FFB74D;
+    cursor: pointer;
+}
+
 .loginPageLoginGoogle {
     box-sizing: border-box;
     /* Auto layout */
@@ -181,6 +190,11 @@
     font-size: 24px;
     line-height: 29px;
     color: #FFFFFF;
+}
+
+.loginPageLoginGoogle:hover {
+    background-color: #1c1c1c;
+    cursor: pointer;
 }
 
 .loginRight svg {

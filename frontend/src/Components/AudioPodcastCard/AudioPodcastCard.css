@@ -1,17 +1,15 @@
-.audioPodcast{
+.audioPodcast {
     /* position: absolute; */
     width: 526.04px;
     height: 575px;
     left: 144px;
     top: 1065px;
-
     /* background */
-
     background: #303030;
     border-radius: 10.4167px;
 }
 
-.audioImage img{
+.audioImage img {
     /* position: absolute; */
     width: 526.04px;
     height: 248.96px;
@@ -19,7 +17,7 @@
     top: 0px;
 }
 
-.audioText{
+.audioText {
     /* position: relative; */
     width: 465px;
     height: 278px;
@@ -27,35 +25,30 @@
     margin-top: 15.62px;
 }
 
-.audioCategory{
+.audioCategory {
     /* position: relative; */
     width: 214px;
     height: 20px;
     /* top: 15px; */
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     /* identical to box height */
-
     display: flex;
     align-items: center;
-
     /* text */
-
     opacity: 0.8;
     color: #FFFFFF;
 }
 
-.audioHeading{
+.audioHeading {
     /* position: relative; */
     width: 465px;
     height: 117px;
     /* left: 20px; */
     margin-top: 10.25px;
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -64,44 +57,35 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     /* text */
-
     color: #FFFFFF;
-
 }
 
-.audioSubheading{
+.audioSubheading {
     /* position: relative; */
     width: 465px;
     height: 66px;
     margin-top: 12.37px;
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
     /* or 22px */
-
     display: flex;
     align-items: center;
-
     /* text */
-
     color: #FFFFFF;
-
     opacity: 0.8;
 }
 
-.audioPodcastCreator{
+.audioPodcastCreator {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0px;
     gap: 153px;
-
     /* position: relative; */
     width: 465px;
     height: 36px;
@@ -110,38 +94,32 @@
     /* bottom: 20px; */
 }
 
-.creatorName{
+.creatorName {
     width: 211px;
     height: 20px;
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     /* identical to box height */
-
     display: flex;
     align-items: center;
-
     /* text */
-
     color: #FFFFFF;
-
     opacity: 0.8;
 }
 
-.creatorName svg{
+.creatorName svg {
     margin-right: 10px;
 }
 
-.creatorTime{
+.creatorTime {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
     gap: 8px;
-
     width: 81px;
     height: 20px;
     font-family: 'Montserrat';
@@ -150,12 +128,14 @@
     font-size: 16px;
     line-height: 20px;
     /* identical to box height */
-
     display: flex;
     align-items: center;
-
     /* text */
-
     color: #FFFFFF;
     opacity: 0.8;
+}
+
+.audioLogo:hover {
+    opacity: 0.9;
+    cursor: pointer;
 }

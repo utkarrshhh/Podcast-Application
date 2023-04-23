@@ -81,6 +81,11 @@
     background: none;
 }
 
+.explorePodcastButton button:hover {
+    color: #FF9800;
+    cursor: pointer;
+}
+
 .startListeningButton {
     display: flex;
     flex-direction: row;
@@ -109,6 +114,11 @@
     text-align: center;
     text-transform: capitalize;
     color: #303030;
+}
+
+.startListeningButton button:hover {
+    background: #FFB74D;
+    cursor: pointer;
 }
 
 .headerImage {

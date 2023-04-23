@@ -8,6 +8,7 @@ import SignUp from "./Pages/SignUp"
 import Home from "./Pages/Home"
 
 import "./App.css"
+import SearchPage from './Pages/SearchPage';
 
 export default function App() {
   return (
@@ -19,7 +20,7 @@ export default function App() {
             <Route path="/login" element={<Login/>}/>
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/home" element={<Home/>}/>
-
+            <Route path="/search" element={<SearchPage />}/>
           </Routes>
           <Footer />
       </BrowserRouter>

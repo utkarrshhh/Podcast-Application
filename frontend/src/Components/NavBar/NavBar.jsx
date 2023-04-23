@@ -30,7 +30,7 @@ export default function NavBar() {
             stroke-linejoin="round"
           />
         </svg>
-        <input type="text" placeholder="Start looking for the best podcasts" />
+        <input type="text" placeholder="Start looking for the best podcasts"/>
       </div>
       <div className="buttons">
         <div className="loginNav">

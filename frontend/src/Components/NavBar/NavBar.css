@@ -38,6 +38,9 @@ img {
     width: 456.43px;
     /* border-bottom: #FFFFFF; */
     color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 18px;
 }
 
 .search input:focus {
@@ -85,6 +88,10 @@ img {
     /* text-decoration: none; */
 }
 
+.loginNav button:hover {
+    color: #FF9800;
+}
+
 a {
     text-decoration: none;
 }
@@ -121,4 +128,9 @@ a {
     /* background */
     cursor: pointer;
     color: #303030;
+}
+
+.signup button:hover {
+    background: #FFB74D;
+    cursor: pointer;
 }
