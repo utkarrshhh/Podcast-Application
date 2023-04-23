@@ -11,7 +11,7 @@ export default function Home() {
         <SideBar />
         <div>
           <div>
-            <h2>Now Playing</h2>
+            <div className="nowPlayingHeader">Now Playing</div>
             <NowPlaying/>
           </div>
         </div>

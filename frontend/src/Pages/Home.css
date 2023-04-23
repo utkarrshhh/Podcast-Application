@@ -3,3 +3,17 @@
     display: flex;
     gap: 30px;
 }
+
+.nowPlayingHeader{
+    width: 187px;
+    height: 39px;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    color: #FF9800;
+}
