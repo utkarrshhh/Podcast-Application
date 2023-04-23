@@ -12,3 +12,8 @@
     background-size: cover;
     width: 100%;
 }
+
+.search-results {
+    width: 80%;
+    margin: 0 auto;
+}
