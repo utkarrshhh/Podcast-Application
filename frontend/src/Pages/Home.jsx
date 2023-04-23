@@ -2,7 +2,7 @@ import React from "react";
 import NavBarHome from "../Components/NavBar/NavBarHome";
 import SideBar from "../Components/NavBar/SideBar";
 import "./Home.css";
-import NowPlaying from "../Components/NowPlayingComponent/NowPlaying";
+import ContinueWatching from "../Components/NowPlayingComponent/ContinueWatching";
 export default function Home() {
   return (
     <div className="home">
@@ -11,8 +11,8 @@ export default function Home() {
         <SideBar />
         <div>
           <div>
-            <h2>Now Playing</h2>
-            <NowPlaying/>
+            <h2>Pick Up Where You Left Off</h2>
+            <ContinueWatching/>
           </div>
         </div>
       </div>
