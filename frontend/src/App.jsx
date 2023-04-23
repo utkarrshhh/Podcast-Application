@@ -6,6 +6,7 @@ import LandingPage from "./Pages/LandingPage"
 import Login from "./Pages/Login"
 import SignUp from "./Pages/SignUp"
 import Home from "./Pages/Home"
+import Dashboard from './Pages/Dashboard';
 
 import "./App.css"
 import SearchPage from './Pages/SearchPage';
@@ -21,6 +22,7 @@ export default function App() {
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/home" element={<Home/>}/>
             <Route path="/search" element={<SearchPage />}/>
+            <Route path="/dashboard" element={<Dashboard />}/>
           </Routes>
           <Footer />
       </BrowserRouter>

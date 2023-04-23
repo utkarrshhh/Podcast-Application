@@ -1,0 +1,62 @@
+.dashboardComponent{
+    margin-top: 30px;
+    margin-left: 195px;
+    width: 720px;
+    height: 383px;
+    background: linear-gradient(98.05deg, #303030 -89.33%, rgba(48, 48, 48, 0) 98%);
+    border-radius: 20px;
+}
+
+.dashboardContent{
+    width: 629px;
+    height: 291px;
+    margin-left: 46px;
+    padding-top: 46px;
+}
+
+.dashboardIcon{
+    width: 36.5px;
+    height: 54.75px;
+    margin-left: 296.25px;
+}
+
+.dashboardContentText{
+    margin-top: 42.25px;
+    width: 629px;
+    height: 98px;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.dashboardStartUploading{
+    width: 275px;
+    height: 44px;
+    margin-left: 177px;
+    margin-top: 52px;
+}
+
+.dashboardStartUploading button{
+    padding: 10px 24px;
+    background: #FF9800;
+    border-radius: 74px;
+    border: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #303030;
+
+    
+}
