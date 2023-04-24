@@ -14,11 +14,11 @@ async function getTop(req, res, next) {
     tempData.description = element.description;
     tempData.author = element.author;
     tempData.category = element.category;
-    tempData.thumbnail = "http://134.209.153.161:3000/file/thumbnail/" + element._id;
+    tempData.thumbnail = "http://134.209.153.161:5000/file/thumbnail/" + element._id;
     if (element.category === "audio") {
-      tempData.fileurl = "http://134.209.153.161:3000/file/audio/" + element._id;
+      tempData.fileurl = "http://134.209.153.161:5000/file/audio/" + element._id;
     } else {
-      tempData.fileurl = "http://134.209.153.161:3000/file/video/" + element._id;
+      tempData.fileurl = "http://134.209.153.161:5000/file/video/" + element._id;
     }
     if(element.category === "video"){
         var filepath = path.join(__dirname,"../../assets/video/",element.filename)

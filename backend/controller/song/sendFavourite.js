@@ -27,11 +27,11 @@ async function sendUserSearch(req, res, next) {
           finaldur = `${parseInt(duration/60)}:${Math.round(duration-(parseInt(duration/60)*60))}`
         }
         tempData.time = finaldur
-        tempData.thumbnail = "http://134.209.153.161:3000//file/thumbnail/"+element._id
+        tempData.thumbnail = "http://134.209.153.161:5000/file/thumbnail/"+element._id
         if(element.category === "audio"){
-            tempData.fileurl = "http://134.209.153.161:3000//file/audio/"+element._id
+            tempData.fileurl = "http://134.209.153.161:5000/file/audio/"+element._id
         }else{
-            tempData.fileurl = "http://134.209.153.161:3000//file/video/"+element._id
+            tempData.fileurl = "http://134.209.153.161:5000/file/video/"+element._id
         }
         try {
           var response = await favsongs.find({
