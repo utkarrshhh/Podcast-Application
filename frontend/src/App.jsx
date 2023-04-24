@@ -8,6 +8,7 @@ import SignUp from "./Pages/SignUp"
 import Home from "./Pages/Home"
 import Dashboard from './Pages/Dashboard';
 import SearchPage from './Pages/SearchPage';
+import Form from './Pages/Form';
 
 import { AuthContext } from "./Components/Context/Context.jsx";
 
@@ -33,8 +34,9 @@ export default function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<Login/>}/>
             <Route path="/signup" element={<SignUp/>}/>
-            {authContextValue.loggedIn && (<Route path="/home" element={<Home/>}/>)}
             <Route path="/search" element={<SearchPage />}/>
+            {authContextValue.loggedIn && (<Route path="/form" element={<Form/>}/>)}
+            {authContextValue.loggedIn && (<Route path="/home" element={<Home/>}/>)}
             {authContextValue.loggedIn && (<Route path="/dashboard" element={<Dashboard/>}/>)}
           </Routes>
           <Footer />

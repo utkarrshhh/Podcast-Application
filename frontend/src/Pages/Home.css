@@ -21,3 +21,14 @@
 #BW{
     margin-top: 40px;
 }
+
+.formHeading{
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
+    color: #00BCD4;
+    }

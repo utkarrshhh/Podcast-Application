@@ -1,8 +1,25 @@
+const path = require("path");
 const fs = require("fs");
-const path = require("path")
+const song = require("../../db/model/songs");
+async function sendfile(req, res, next) {
+  try {
+    var result = await song.findById(req.params.id);
+    result.played = result.played + 1;
+    result.save();
+    req.body.filename = result.filename;
+  } catch (err) {
+    req.body.filename = "error";
+  }
+  sendSong(req, res, next);
+}
 
-function sendfile(req, res, next) {
-  const file = path.join(__dirname, "..\\..\\assets\\music\\"+req.body.filename);
+function sendSong(req, res, next) {
+  var file = path.join(
+    __dirname,
+    "..\\..\\assets\\music\\" + req.body.filename
+  );
+  if (!fs.existsSync(file))
+    file = path.join(__dirname, "..\\..\\assets\\music\\error.mp3");
   var stat = fs.statSync(file);
   var total = stat.size;
   if (req.headers.range) {
@@ -29,4 +46,5 @@ function sendfile(req, res, next) {
     fs.createReadStream(filePath).pipe(res);
   }
 }
+
 module.exports = sendfile;

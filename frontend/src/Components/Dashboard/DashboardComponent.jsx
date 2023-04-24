@@ -1,6 +1,7 @@
 import React from 'react'
 
 import "./DashboardComponent.css"
+import { Link } from 'react-router-dom'
 
 export default function DashboardComponent() {
   return (
@@ -16,7 +17,9 @@ export default function DashboardComponent() {
           Seems like you’ve not uploaded any podcasts yet!
         </div>
         <div className="dashboardStartUploading">
-          <button className="startUploading">Start Uploading Today</button>
+          <Link to="/form">
+            <button className="startUploading">Start Uploading Today</button>
+          </Link>
         </div>
       </div>
     </div>
