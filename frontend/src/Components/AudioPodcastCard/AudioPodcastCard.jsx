@@ -18,7 +18,19 @@ export default function AudioPodcastCard(props) {
           </div>
           <div className="audioLogo">
             {/* <audio src=""> */}
-              {props.logo}
+            <svg
+              width="67"
+              height="67"
+              viewBox="0 0 67 67"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle opacity="0.8" cx="33.5" cy="33.5" r="33.5" fill="#FF9800" />
+              <path
+                d="M45.6079 31.7679C46.9412 32.5377 46.9412 34.4622 45.6079 35.232L28.9461 44.8517C27.6128 45.6215 25.9461 44.6593 25.9461 43.1197L25.9461 23.8803C25.9461 22.3407 27.6128 21.3785 28.9461 22.1483L45.6079 31.7679Z"
+                fill="white"
+              />
+            </svg>
             {/* </audio> */}
           </div>
         </div>
