@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <audio controls autoplay="true" id="aud">
+        <source src="http://127.0.0.1:5000/file/vinit" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls autoplay="true" id="aud">
+        <source src="http://127.0.0.1:5000/file/test" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+<script>
+    var playing = false
+    var audio = document.getElementById("aud")
+    audio.onplaying = async () => {
+        playing = true
+        while (playing) {
+            await sleep(2000)
+            console.log(audio.currentTime)
+            var body = {}
+            body.current = audio.currentTime
+            body.playing = playing
+            await fetch("http://127.0.0.1:5000/file/duration", {
+                method: "POST",
+                body: JSON.stringify(body),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+            })
+        }
+    }
+    audio.onpause = () => {
+        playing = false
+    }
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+</script>
+
+</html>
