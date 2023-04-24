@@ -3,7 +3,7 @@ import "./PodcastForm.css"
 
 export default function PodcastForm() {
   return (
-    <form className='podcastForm' action="http://localhost:5000/file/upload" method="post" enctype="multipart/form-data">
+    <form className='podcastForm' action="/file/upload" method="post" enctype="multipart/form-data">
         <div className="podcastName">
             <label htmlFor="podcastNameInput" className='podcastNameLabel'>Podcast Name</label>
             <input type="text" placeholder='Name of the podcast' id='podcastNameInput' name="name"/>
