@@ -5,10 +5,10 @@ import "./AudioPodcastCard.css"
 export default function AudioPodcastCard(props) {
   const [play,setPlay]=useState("playShow")
   const [pause,setPause]=useState("pauseHidden")
-  // const [fav,setFav]=useState("Mark as Favourite")
-  
+
+  const element=localStorage.getItem("id")
+
   function play_pause(player) {
-    // console.log("vinit")
     var myAudio = document.getElementById(player);
     if (myAudio==null){
       return
@@ -32,6 +32,10 @@ export default function AudioPodcastCard(props) {
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify({user,song:props.id})
     });
+
+    window.location.reload(true);
+
+    // redirect("/fav")
     // setFav("Marked as Favourite")
   }
 
@@ -100,7 +104,8 @@ export default function AudioPodcastCard(props) {
           {/* {props.creator} */}
         </div>
       </div>
-      <div className="audioFavourite" onClick={favHandler}>
+      {element?
+      (<div className="audioFavourite" onClick={favHandler}>
         {
           props.isFav===true
           ?
@@ -108,7 +113,10 @@ export default function AudioPodcastCard(props) {
           :
           ("Mark as favourite")
         }
-      </div>
+      </div>)
+      :
+      <></>
+    }
     </div>
   )
 }

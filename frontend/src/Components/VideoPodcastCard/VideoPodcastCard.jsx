@@ -7,8 +7,9 @@ export default function VideoPodcastCard(props) {
   const [play,setPlay]=useState("playShow")
   const [pause,setPause]=useState("pauseHidden")
   
+  const element=localStorage.getItem("id")
+
   function play_pause(player) {
-    // console.log("vinit")
     var myAudio = document.getElementById(player);
     if (myAudio==null){
       return
@@ -32,6 +33,9 @@ export default function VideoPodcastCard(props) {
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify({user,song:props.id})
     });
+
+    window.location.reload(true);
+
   }
 
   return (
@@ -97,7 +101,8 @@ export default function VideoPodcastCard(props) {
           {/* {props.creator} */}
         </div>
       </div>
-      <div className="videoFavourite" onClick={favHandler}>
+      {element?
+      (<div className="videoFavourite" onClick={favHandler}>
         {
           props.isFav===true
           ?
@@ -105,7 +110,10 @@ export default function VideoPodcastCard(props) {
           :
           ("Mark as favourite")
         }
+      </div>)
+      :
+      <></>
+      }
       </div>
-    </div>
   )
 }
