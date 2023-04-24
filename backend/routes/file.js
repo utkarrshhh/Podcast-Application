@@ -5,6 +5,7 @@ const sendThumbnailFile = require("../controller/song/sendThumbnailFile");
 const upload = require("../controller/song/upload");
 const duration = require("../controller/song/durationManager")
 const topcharts = require("../controller/song/topcharts")
+const topchartsuser = require("../controller/song/topchartsuser")
 const search = require("../controller/song/search")
 const userSearch = require("../controller/song/userSearch")
 const sendFavourite = require("../controller/song/sendFavourite")
@@ -36,6 +37,7 @@ router.get("/audio/:id", sendfile);
 router.get("/video/:id", sendVideoFile);
 router.get("/thumbnail/:id", sendThumbnailFile);
 router.get("/topcharts",topcharts)
+router.get("/topcharts/:id",topchartsuser)
 router.get("/user/:id",userSearch)
 router.get("/search/:name",search)
 router.get("/favourite/:id",sendFavourite)

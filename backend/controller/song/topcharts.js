@@ -1,4 +1,7 @@
 const songModel = require("../../db/model/songs")
+const path = require("path")
+const { getVideoDurationInSeconds } = require('get-video-duration')
+const { getAudioDurationInSeconds } = require('get-audio-duration')
 async function getTop(req,res,next){
     var sortedSongData = await songModel.find().sort({played:-1}).limit(10);
     var resData = []

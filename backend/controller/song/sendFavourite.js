@@ -1,5 +1,8 @@
 const favsongs = require("../../db/model/favorite")
 const songs = require("../../db/model/songs")
+const path = require("path")
+const { getVideoDurationInSeconds } = require('get-video-duration')
+const { getAudioDurationInSeconds } = require('get-audio-duration')
 async function sendUserSearch(req, res, next) {
   try {
     var searchData = await favsongs.find({user:req.params.id})
