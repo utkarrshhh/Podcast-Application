@@ -16,10 +16,10 @@ async function sendfile(req, res, next) {
 function sendVideo(req, res, next) {
   var file = path.join(
     __dirname,
-    "..\\..\\assets\\video\\" + req.body.filename
+    "../../assets/video/" + req.body.filename
   );
   if (!fs.existsSync(file))
-    file = path.join(__dirname, "..\\..\\assets\\video\\error.mp4");
+    file = path.join(__dirname, "../../assets/video/error.mp4");
   var stat = fs.statSync(file);
   var total = stat.size;
   if (req.headers.range) {

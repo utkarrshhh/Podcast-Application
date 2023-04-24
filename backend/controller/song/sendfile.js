@@ -17,11 +17,11 @@ async function sendfile(req, res, next) {
 function sendSong(req, res, next) {
   var file = path.join(
     __dirname,
-    "..\\..\\assets\\music\\" + req.body.filename
+    "../../assets/music/" + req.body.filename
   );
   console.log(file)
   if (!fs.existsSync(file))
-    file = path.join(__dirname, "..\\..\\assets\\music\\error.mp3");
+    file = path.join(__dirname, "../../assets/music/error.mp3");
   var stat = fs.statSync(file);
   var total = stat.size;
   console.log(total)

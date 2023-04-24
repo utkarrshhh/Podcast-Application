@@ -6,7 +6,7 @@ async function sendThumbnailFile(req, res, next) {
   if (songData.category === "video") {
     var file = path.join(
         __dirname,
-        "..\\..\\assets\\video\\" + songData.thumbnail
+        "../../assets/video/" + songData.thumbnail
       );
     fs.readFile(file, function (err, content) {
       // Serving the image
@@ -15,7 +15,7 @@ async function sendThumbnailFile(req, res, next) {
   }else{
     var file = path.join(
         __dirname,
-        "..\\..\\assets\\music\\" + songData.thumbnail
+        "../../assets/music/" + songData.thumbnail
       );
     fs.readFile(file, function (err, content) {
       // Serving the image
