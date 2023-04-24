@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { Link } from 'react-router-dom'
 
-// import BingeWorthy from "../BingeWorthy/BingeWorthy"
 import DashboardPodcast from "../Dashboard/Cards/DashboardPodcast.jsx"
 import "./DashboardComponent.css"
 

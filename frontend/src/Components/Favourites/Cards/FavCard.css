@@ -1,21 +1,18 @@
-.dashboardPodcast{
+.FAV{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* width: 100vw; */
 }
 
-.dashboardPodcast .elementsOfCarousel {
+.FAV .elementsOfCarousel {
     margin-top: 30px;
     width: auto;
     height: 370px;
     padding-right: 10px ;
-    /* display: flex; */
-    /* flex-direction: row; */
 }
 
-.dashboardPodcast .audioPodcast,
-.dashboardPodcast .videoPodcast {
+.FAV .audioPodcast,
+.FAV .videoPodcast {
     /* background: red; */
     width: 311.05px;
     height: 355.68px;
@@ -23,36 +20,36 @@
     border-radius: 10.4167px;
 }
 
-.dashboardPodcast .audioImage img,
-.dashboardPodcast .videoImage img {
+.FAV .audioImage img,
+.FAV .videoImage img {
     width: 311.05px;
     height: 147.21px;
 }
 
-.dashboardPodcast .audioCard,
-.dashboardPodcast .videoCard {
+.FAV .audioCard,
+.FAV .videoCard {
     background-color: transparent;
     width: auto;
 }
 
-.dashboardPodcast .audioText,
-.dashboardPodcast .videoText {
+.FAV .audioText,
+.FAV .videoText {
     width: 286.41px;
     height: 170.91px;
     margin-top: 9.24px;
     margin-left: 12.34px;
 }
 
-.dashboardPodcast .audioCategory,
-.dashboardPodcast .videoCategory {
+.FAV .audioCategory,
+.FAV .videoCategory {
     width: 132px;
     height: 12px;
     font-size: 9.85507px;
     line-height: 12px;
 }
 
-.dashboardPodcast .audioHeading,
-.dashboardPodcast .videoHeading {
+.FAV .audioHeading,
+.FAV .videoHeading {
     margin-top: 6.48px;
     width: 286.41px;
     height: 72px;
@@ -60,13 +57,13 @@
     line-height: 24px;
 }
 
-.dashboardPodcast .audioHeadingText,
-.dashboardPodcast .videoHeadingText {
+.FAV .audioHeadingText,
+.FAV .videoHeadingText {
     width: 233.44px;
 }
 
-.dashboardPodcast .audioSubheading,
-.dashboardPodcast .videoSubheading {
+.FAV .audioSubheading,
+.FAV .videoSubheading {
     width: 286.41px;
     height: 42px;
     font-size: 9.85507px;
@@ -74,16 +71,16 @@
     margin-top: 6.46px;
 }
 
-.dashboardPodcast .audioPodcastCreator,
-.dashboardPodcast .videoPodcastCreator {
+.FAV .audioPodcastCreator,
+.FAV .videoPodcastCreator {
     width: 286.41px;
     height: 21.86px;
     margin-top: 10.12px;
     gap: 0px;
 }
 
-.dashboardPodcast .creatorName,
-.dashboardPodcast .creatorName {
+.FAV .creatorName,
+.FAV .creatorName {
     width: 148.49px;
     height: 21.86px;
     font-size: 9.85507px;
@@ -91,29 +88,33 @@
     margin-left: 9.85px;
 }
 
-.dashboardPodcast .creatorName svg,
-.dashboardPodcast .creatorName svg {
+.FAV .creatorName svg,
+.FAV .creatorName svg {
     width: 9.86px;
     height: 9.86px;
     margin-right: 4.93px;
     /* margin-left: ; */
 }
 
-.dashboardPodcast .creatorTime,
-.dashboardPodcast .creatorTime {
+.FAV .creatorTime,
+.FAV .creatorTime {
     width: 60px;
     height: 12px;
     font-size: 9.85507px;
     line-height: 12px;
 }
 
-.dashboardPodcast .audioLogo {
+.FAV .audioLogo {
     width: 41.27px;
     height: 41.27px;
     margin-left: 11.7px;
 }
 
-.dashboardPodcast .audioLogo svg {
+.FAV .audioLogo svg {
     width: 41.27px;
     height: 41.27px;
+}
+
+.audioFavourite{
+    content: "Remove as favourite";
 }

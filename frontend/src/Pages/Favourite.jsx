@@ -4,10 +4,11 @@ import NavBarSmall from '../Components/NavBar/NavBarSmall'
 import Favourites from '../Components/Favourites/Favourites'
 
 export default function Favourite() {
-  const user=localStorage.getItem("email")
+  const userEmail=localStorage.getItem("email")
+
   return (
     <div className='fav'>
-      <NavBarSmall title={user}/>
+      <NavBarSmall title={userEmail}/>
       <div className="flex">
         <SideBar/>
         <div>

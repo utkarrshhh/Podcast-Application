@@ -147,3 +147,17 @@
     opacity: 0.9;
     cursor: pointer;
 }
+
+.audioFavourite{
+    text-align: center;
+    font-size: small;
+    color: #FFFFFF;
+    opacity: 0.8;
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+.audioFavourite:hover{
+    color: #FFFFFF;
+    opacity: 1;
+}
