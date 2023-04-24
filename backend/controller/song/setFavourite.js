@@ -5,7 +5,8 @@ async function setFavourite(req,res,next){
         var response = await favourite.find({
             $and: [{ song: req.body.son }, { user: req.body.user }],
           });
-          if(response.length === 0){
+          console.log(response)
+          if(response.length == 0){
             var favoriteData = new favourite(req.body)
             favoriteData.save()
           }else{
