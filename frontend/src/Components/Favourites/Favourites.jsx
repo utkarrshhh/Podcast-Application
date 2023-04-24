@@ -13,8 +13,9 @@ export default function Favourites(props) {
       const fetchData =async()=>{
           const data=await fetch(`/file/favourite/${user}`)
           const json=await data.json();
-          setPodcast(json)
-          if(podcast.length===0){
+          await setPodcast(json)
+          console.log(podcast)
+          if(json.length===0){
             setHidden("fnotHidden")
           }
           else{

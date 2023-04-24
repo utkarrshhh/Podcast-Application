@@ -5,6 +5,7 @@ import "./AudioPodcastCard.css"
 export default function AudioPodcastCard(props) {
   const [play,setPlay]=useState("playShow")
   const [pause,setPause]=useState("pauseHidden")
+  // const [fav,setFav]=useState("Mark as Favourite")
   
   function play_pause(player) {
     // console.log("vinit")
@@ -22,6 +23,16 @@ export default function AudioPodcastCard(props) {
       setPlay("playShow")
       setPause("pauseHidden")
     }
+  }
+
+  const favHandler=async()=> {
+    const user=localStorage.getItem("id")
+    await fetch('/file/setfavourite',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({user,song:props.id})
+    });
+    // setFav("Marked as Favourite")
   }
 
   return (
@@ -86,6 +97,15 @@ export default function AudioPodcastCard(props) {
           </div>
           {/* {props.creator} */}
         </div>
+      </div>
+      <div className="audioFavourite" onClick={favHandler}>
+        {
+          props.isFav===true
+          ?
+          ("Marked as favourite")
+          :
+          ("Mark as favourite")
+        }
       </div>
     </div>
   )

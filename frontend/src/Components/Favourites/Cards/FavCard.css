@@ -15,7 +15,7 @@
 .FAV .videoPodcast {
     /* background: red; */
     width: 311.05px;
-    height: 339.68px;
+    height: 355.68px;
     background: #303030;
     border-radius: 10.4167px;
 }
@@ -113,4 +113,8 @@
 .FAV .audioLogo svg {
     width: 41.27px;
     height: 41.27px;
+}
+
+.audioFavourite{
+    content: "Remove as favourite";
 }
