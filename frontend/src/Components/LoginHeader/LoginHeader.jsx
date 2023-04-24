@@ -1,8 +1,53 @@
-import React from 'react'
+import React,{ useState,useContext } from 'react'
+import {useNavigate} from "react-router-dom"
+import { AuthContext } from "../Context/Context";
 
 import  "./LoginHeader.css"
 
 export default function LoginHeader() {
+const [email, setEmail]=useState('');
+  const [password, setPassword]=useState('');
+  const [error,setError]=useState(null);
+
+  const authContextValue=useContext(AuthContext);
+
+  const redirect=useNavigate();
+
+  const fetchFunction = async () => {
+    const response=await fetch('/auth/login',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({email,password})
+    });
+    const json=await response.json();
+
+    if(response.ok){
+      authContextValue.email=email;
+      setError(json.error);
+      if(!json.error){
+        console.log(authContextValue)
+        authContextValue.setLoggedIn(true);
+        authContextValue.setUserID(json.id);
+        authContextValue.login(json.email,json.token,json.userid);
+        redirect("/dashboard")
+      }
+      if(json.error){
+        authContextValue.setLoggedIn(false);
+      }
+    }
+
+    if(!response.ok){
+        console.log("blahb;ah")
+        setError(error);
+      authContextValue.setLoggedIn(false);
+    }
+  };
+
+  const handleSubmit=async (e)=>{
+    e.preventDefault();
+    fetchFunction();
+  }
+
   return (
     <div className='LoginHeader'>
         <div className="loginLeft">
@@ -10,14 +55,14 @@ export default function LoginHeader() {
             <div className="loginLInputs">
                 <div className="loginEmail">
                     <label htmlFor="loginInputEmail" className='loginInputEmailLabel'>Email</label>
-                    <input type="text" id='loginInputEmail' placeholder='Enter email'/>
+                    <input type="text" id='loginInputEmail' placeholder='Enter email'  onChange={(e)=>setEmail(e.target.value)} value={email}/>
                 </div>
                 <div className="loginPassword">
                     <label htmlFor="loginInputPassword" className='loginInputPasswordLabel'>Password</label>
-                    <input type="text" id='loginInputPassword' placeholder='Enter password'/></div>
+                    <input type="password" id='loginInputPassword' placeholder='Enter password'  onChange={(e)=>setPassword(e.target.value)} value={password}/></div>
                 <div className="loginForgotPassword">Forgot Password? Reset</div>
                 <div className="loginPageLButtons">
-                    <button className="loginPageLoginButton">Login</button>
+                    <button className="loginPageLoginButton" onClick={handleSubmit}>Login</button>
                     <button className="loginPageLoginGoogle">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.26395 5.51C2.09596 3.85324 3.37232 2.46051 4.95038 1.48747C6.52844 0.514427 8.34601 -0.000583569 10.2 4.96231e-07C12.895 4.96231e-07 15.159 0.991001 16.89 2.605L14.023 5.473C12.986 4.482 11.668 3.977 10.2 3.977C7.59495 3.977 5.38995 5.737 4.60495 8.1C4.40495 8.7 4.29095 9.34 4.29095 10C4.29095 10.66 4.40495 11.3 4.60495 11.9C5.39095 14.264 7.59495 16.023 10.2 16.023C11.545 16.023 12.69 15.668 13.586 15.068C14.1054 14.726 14.5501 14.2822 14.8932 13.7635C15.2362 13.2448 15.4705 12.6619 15.582 12.05H10.2V8.182H19.618C19.736 8.836 19.8 9.518 19.8 10.227C19.8 13.273 18.71 15.837 16.818 17.577C15.164 19.105 12.9 20 10.2 20C8.88659 20.0005 7.58599 19.7422 6.3725 19.2399C5.159 18.7375 4.0564 18.0009 3.12771 17.0722C2.19902 16.1436 1.46245 15.041 0.960086 13.8275C0.457725 12.614 0.199426 11.3134 0.199952 10C0.199952 8.386 0.585952 6.86 1.26395 5.51Z" fill="white"/>

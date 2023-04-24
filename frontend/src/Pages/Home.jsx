@@ -9,7 +9,7 @@ import BingeWorthy from "../Components/BingeWorthy/BingeWorthy";
 export default function Home() {
   return (
     <div className="home">
-      <NavBarHome title="Ajay Khatri" />
+      <NavBarHome title="Admin" />
       <div className="flex">
         <SideBar />
         <div>
