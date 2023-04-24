@@ -7,6 +7,7 @@ const duration = require("../controller/song/durationManager")
 const topcharts = require("../controller/song/topcharts")
 const search = require("../controller/song/search")
 const userSearch = require("../controller/song/userSearch")
+const sendFavourite = require("../controller/song/sendFavourite")
 const multer = require("multer");
 const Path = require("path");
 const { v4: uuidv4 } = require("uuid");
@@ -36,6 +37,7 @@ router.get("/thumbnail/:id", sendThumbnailFile);
 router.get("/topcharts",topcharts)
 router.get("/user/:id",userSearch)
 router.get("/search/:name",search)
+router.get("/favourite/:id",sendFavourite)
 
 
 const error = require("../middleware/error") 
