@@ -8,6 +8,7 @@ const topcharts = require("../controller/song/topcharts")
 const search = require("../controller/song/search")
 const userSearch = require("../controller/song/userSearch")
 const sendFavourite = require("../controller/song/sendFavourite")
+const setFavourite = require("../controller/song/setFavourite")
 const multer = require("multer");
 const Path = require("path");
 const { v4: uuidv4 } = require("uuid");
@@ -38,6 +39,7 @@ router.get("/topcharts",topcharts)
 router.get("/user/:id",userSearch)
 router.get("/search/:name",search)
 router.get("/favourite/:id",sendFavourite)
+router.post("/setfavourite",setFavourite)
 
 
 const error = require("../middleware/error") 

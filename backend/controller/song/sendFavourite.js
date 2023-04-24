@@ -28,7 +28,7 @@ async function sendUserSearch(req, res, next) {
     err.code = 401;
     err.message = "Invalid Data";
     err.error = ex;
-    err.from = "controller-song-userSearch";
+    err.from = "controller-song-sendfavourite";
     next(err);
   }
 }
