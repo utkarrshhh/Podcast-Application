@@ -33,7 +33,8 @@ router.get("/audio/:id", sendfile);
 router.get("/video/:id", sendVideoFile);
 router.get("/thumbnail/:id", sendThumbnailFile);
 router.get("/topcharts",topcharts)
-//router.get("/search/:id",search)
+//router.get("/user/:id",)
+//router.get("/search/:name",search)
 
 
 const error = require("../middleware/error") 
