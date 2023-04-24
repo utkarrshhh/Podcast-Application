@@ -13,7 +13,7 @@ export default function FavCard(props) {
                         {data.category==="audio"
                         ?
                         (<div className="audioCard">
-                            <AudioPodcastCard image={data.thumbnail} category="CATEGORY NAME - AUDIO" heading={data.name} subHeading={data.description} creator={data.author} source={data.fileurl} id={data.id}/>
+                            <AudioPodcastCard image={data.thumbnail} category="CATEGORY NAME - AUDIO" heading={data.name} subHeading={data.description} creator={data.author} source={data.fileurl} id={data.id} isFav={data.isfav}/>
                         </div>)
                         :
                         (<div className="videoCard">

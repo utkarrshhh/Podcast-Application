@@ -12,7 +12,7 @@
 }
 .videoImage{
     width: 310.04px;
-    height: 248.96px;
+    height: 147.21px;
     overflow: hidden;
 }
 .videoImage video{
@@ -161,4 +161,18 @@
 
     color: #FFFFFF;
     opacity: 0.8;
+}
+
+.videoFavourite{
+    text-align: center;
+    font-size: small;
+    color: #FFFFFF;
+    opacity: 0.8;
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+.videoFavourite:hover{
+    color: #FFFFFF;
+    opacity: 1;
 }
