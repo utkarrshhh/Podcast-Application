@@ -3,7 +3,7 @@ import NavBarHome from "../Components/NavBar/NavBarHome";
 import SideBar from "../Components/NavBar/SideBar";
 import "./Home.css";
 // import ContinueWatching from "../Components/ContinueWatching/ContinueWatching";
-import NowPlaying from "../Components/NowPlayingComponent/NowPlaying";
+// import NowPlaying from "../Components/NowPlayingComponent/NowPlaying";
 import BingeWorthy from "../Components/BingeWorthy/BingeWorthy";
 
 export default function Home() {
