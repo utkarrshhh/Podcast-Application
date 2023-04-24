@@ -8,10 +8,11 @@ import BingeWorthy from "../Components/BingeWorthy/BingeWorthy";
 
 export default function Home() {
   const useremail=localStorage.getItem("email")
+  const userid=localStorage.getItem("id")
   const [podcast,setPodcast]=useState([]);
     useEffect(()=>{
       const fetchData =async()=>{
-          const data=await fetch("/file/topcharts")
+          const data=await fetch(`/file/topcharts/${userid}`)
           const json=await data.json();
           setPodcast(json)
       }
