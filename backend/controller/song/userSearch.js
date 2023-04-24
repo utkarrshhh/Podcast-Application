@@ -23,9 +23,9 @@ async function sendUserSearch(req, res, next) {
   } catch (ex) {
     err = {};
     err.code = 401;
-    err.message = "Invalid Credentials";
+    err.message = "Invalid Data";
     err.error = ex;
-    err.from = "controller-auth-login";
+    err.from = "controller-song-userSearch";
     next(err);
   }
 }
