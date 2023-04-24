@@ -1,4 +1,5 @@
 const songs = require("../../db/model/songs")
+const favourite = require("../../db/model/favorite");
 async function sendUserSearch(req, res, next) {
   try {
     var searchData = await songs.find({user:req.params.id})
@@ -16,6 +17,16 @@ async function sendUserSearch(req, res, next) {
             tempData.fileurl = "/file/audio/"+element._id
         }else{
             tempData.fileurl = "/file/video/"+element._id
+        }
+        try{
+          var response=await favourite.find({$and:[{song:element.id},{user:req.params.id}]})
+          if(response.length!=0){
+          tempData.isfav = true}else{
+            tempData.isfav = false
+          }
+        }catch(ex){
+          console.log(ex)
+          tempData.isfav = false
         }
         resData.push(tempData)
     }

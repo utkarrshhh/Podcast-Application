@@ -10,13 +10,15 @@
     background: #303030;
     border-radius: 10.4167px;
 }
-
-.videoImage img{
-    /* position: absolute; */
-    width: 526.04px;
+.videoImage{
+    width: 310.04px;
     height: 248.96px;
-    left: 626.87px;
-    top: 0px;
+    overflow: hidden;
+}
+.videoImage video{
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
 }
 
 .videoText{
