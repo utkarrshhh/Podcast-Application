@@ -7,7 +7,7 @@ async function upload(req,res,next){
     uploadData.description = req.body.description
     uploadData.author = req.body.author
     uploadData.category = req.body.category
-    uploadData.user = "vinit"
+    uploadData.user = req.body.userid
     uploadData.thumbnail = req.files.thumbnail[0].filename
     var songData = new songs(uploadData)
     await songData.save()

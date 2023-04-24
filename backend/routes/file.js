@@ -6,6 +6,7 @@ const upload = require("../controller/song/upload");
 const duration = require("../controller/song/durationManager")
 const topcharts = require("../controller/song/topcharts")
 const search = require("../controller/song/search")
+const userSearch = require("../controller/song/userSearch")
 const multer = require("multer");
 const Path = require("path");
 const { v4: uuidv4 } = require("uuid");
@@ -33,7 +34,7 @@ router.get("/audio/:id", sendfile);
 router.get("/video/:id", sendVideoFile);
 router.get("/thumbnail/:id", sendThumbnailFile);
 router.get("/topcharts",topcharts)
-//router.get("/user/:id",)
+router.get("/user/:id",userSearch)
 //router.get("/search/:name",search)
 
 
