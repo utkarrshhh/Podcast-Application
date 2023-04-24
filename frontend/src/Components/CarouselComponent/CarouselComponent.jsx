@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import React from "react";
+import React,{useState,useEffect} from "react";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,15 +8,22 @@ import "./CarouselComponent.css"
 import AudioPodcastCard from "../AudioPodcastCard/AudioPodcastCard"
 import VideoPodcastCard from "../VideoPodcastCard/VideoPodcastCard"
 
-import {audio} from "../../Data/audio"
-
 export default function SimpleSlider() {
-//   render() {
+  const [podcast,setPodcast]=useState([]);
+    useEffect(()=>{
+      const fetchData =async()=>{
+          const data=await fetch("/file/topcharts")
+          const json=await data.json();
+          setPodcast(json)
+      }
+      fetchData();
+    },[])
+
     const settings = {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 1,
+      slidesToShow: 2,
       slidesToScroll: 1,
       autoplay: false,
       arrows: true,
@@ -24,15 +31,19 @@ export default function SimpleSlider() {
     return (
       <div>
         <Slider {...settings}>
-            {audio.map((data)=>{
+        {podcast.map((data)=>{
                 return(
                     <div className="elementsOfCarousel">
-                        <div className="audioCard">
-                            <AudioPodcastCard image={data.imageAudio} category={data.categoryAudio} heading={data.headingAudio} subHeading={data.subHeadingAudio} creator={data.creatorAudio} time={data.timeAudio} logo={data.logoAudio} />
-                        </div>
-                        <div className="videoCard">
-                            <VideoPodcastCard image={data.imageVideo} category={data.categoryVideo} heading={data.headingVideo} subHeading={data.subHeadingVideo} creator={data.creatorVideo} time={data.timeVideo} />
-                        </div>
+                        {data.category==="audio"
+                        ?
+                        (<div className="audioCard">
+                            <AudioPodcastCard image={data.thumbnail} category="CATEGORY NAME - AUDIO" heading={data.name} subHeading={data.description} creator={data.author}/>
+                        </div>)
+                        :
+                        (<div className="videoCard">
+                            <VideoPodcastCard image={data.thumbnail} category="CATEGORY NAME - VIDEO" heading={data.name} subHeading={data.description} creator={data.author} />
+                        </div>)
+                        }
                     </div>
                 )
             })}
