@@ -1,12 +1,47 @@
+import { useState } from "react"
 import React from 'react'
 
 import "./VideoPodcastCard.css"
 
 export default function VideoPodcastCard(props) {
+  const [play,setPlay]=useState("playShow")
+  const [pause,setPause]=useState("pauseHidden")
+  
+  const element=localStorage.getItem("id")
+
+  function play_pause(player) {
+    var myAudio = document.getElementById(player);
+    if (myAudio==null){
+      return
+    }
+    if (myAudio.paused) {
+      myAudio.play();
+      setPlay("playHidden")
+      setPause("pauseShow")
+    }
+    else {
+      myAudio.pause();
+      setPlay("playShow")
+      setPause("pauseHidden")
+    }
+  }
+
+  const favHandler=async()=> {
+    const user=localStorage.getItem("id")
+    await fetch('/file/setfavourite',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({user,song:props.id})
+    });
+
+    window.location.reload(true);
+
+  }
+
   return (
     <div className="videoPodcast">
       <div className="videoImage">
-        <img src={props.image} alt="" />
+              <video poster={props.image} src={props.source} id={props.id}/>
       </div>
       <div className="videoText">
         <div className="videoCategory">
@@ -16,6 +51,36 @@ export default function VideoPodcastCard(props) {
           {/* <div className="videoHeadingText"> */}
             {props.heading}
           {/* </div> */}
+          <div className="audioLogo">
+            <audio src={props.source} id={props.id}/>
+            <div className={play} onClick={()=>{
+              play_pause(props.id)
+            }} height="67" width="67">
+            <svg
+              width="67"
+              height="67"
+              viewBox="0 0 67 67"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle opacity="0.8" cx="33.5" cy="33.5" r="33.5" fill="#FF9800" />
+              <path
+                d="M45.6079 31.7679C46.9412 32.5377 46.9412 34.4622 45.6079 35.232L28.9461 44.8517C27.6128 45.6215 25.9461 44.6593 25.9461 43.1197L25.9461 23.8803C25.9461 22.3407 27.6128 21.3785 28.9461 22.1483L45.6079 31.7679Z"
+                fill="white"
+              />
+            </svg>
+            </div>
+
+            <div className={pause} onClick={()=>{
+              play_pause(props.id)
+            }} height="67" width="67">
+            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle opacity="0.8" cx="20.6341" cy="20.6341" r="20.6341" fill="#FF9800"/>
+              <rect x="12" y="12" width="8" height="18" fill="#D9D9D9"/>
+              <rect x="22" y="12" width="8" height="18" fill="#D9D9D9"/>
+            </svg>
+            </div>
+          </div>
         </div>
         <div className="videoSubheading">
           {props.subHeading}
@@ -36,6 +101,19 @@ export default function VideoPodcastCard(props) {
           {/* {props.creator} */}
         </div>
       </div>
-    </div>
+      {element?
+      (<div className="videoFavourite" onClick={favHandler}>
+        {
+          props.isFav===true
+          ?
+          ("Marked as favourite")
+          :
+          ("Mark as favourite")
+        }
+      </div>)
+      :
+      <></>
+      }
+      </div>
   )
 }

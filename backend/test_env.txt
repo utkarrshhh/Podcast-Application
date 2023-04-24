@@ -1,0 +1,5 @@
+port=<Port Number>
+dbUrl=<MongoDB URL>
+
+#jwt
+jwtKey=<Secret Key For jwt token>

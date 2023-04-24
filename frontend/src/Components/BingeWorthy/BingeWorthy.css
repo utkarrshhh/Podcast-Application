@@ -1,14 +1,21 @@
+.bingeWorthy{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .bingeWorthy .elementsOfCarousel {
     margin-top: 30px;
     width: auto;
     height: 370px;
+    padding-right: 10px ;
 }
 
 .bingeWorthy .audioPodcast,
 .bingeWorthy .videoPodcast {
     /* background: red; */
     width: 311.05px;
-    height: 339.68px;
+    height: 355.68px;
     background: #303030;
     border-radius: 10.4167px;
 }
@@ -22,6 +29,7 @@
 .bingeWorthy .audioCard,
 .bingeWorthy .videoCard {
     background-color: transparent;
+    width: auto;
 }
 
 .bingeWorthy .audioText,

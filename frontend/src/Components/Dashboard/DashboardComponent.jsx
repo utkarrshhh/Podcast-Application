@@ -1,10 +1,34 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
+import DashboardPodcast from "../Dashboard/Cards/DashboardPodcast.jsx"
 import "./DashboardComponent.css"
 
 export default function DashboardComponent() {
+
+  const [podcast,setPodcast]=useState([]);
+  const [hidden,setHidden]=useState("notHidden")
+
+    const user=localStorage.getItem("id");
+    useEffect(()=>{
+      const fetchData =async()=>{
+          const data=await fetch(`/file/user/${user}`)
+          const json=await data.json();
+          setPodcast(json)
+          if(podcast.length===0){
+            setHidden("hidden")
+          }
+          else{
+            setHidden("notHidden")
+          }
+      }
+      fetchData();
+    },[])
+
+
   return (
-    <div className='dashboardComponent'>
+    <>
+    <div className='dashboardComponent' id={hidden}>
       <div className="dashboardContent">
         <div className="dashboardIcon">
           <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,10 +40,15 @@ export default function DashboardComponent() {
           Seems like you’ve not uploaded any podcasts yet!
         </div>
         <div className="dashboardStartUploading">
-          <button className="startUploading">Start Uploading Today</button>
+          <Link to="/form">
+            <button className="startUploading">Start Uploading Today</button>
+          </Link>
         </div>
       </div>
     </div>
+    <DashboardPodcast data={podcast}/>
+    {/* <BingeWorthy/> */}
+    </>
   )
 }
 
