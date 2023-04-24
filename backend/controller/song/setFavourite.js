@@ -3,15 +3,14 @@ const favourite = require("../../db/model/favorite");
 async function setFavourite(req,res,next){
     try{
         var response = await favourite.find({
-            $and: [{ song: req.body.son }, { user: req.body.user }],
+            $and: [{ song: req.body.song }, { user: req.body.user }],
           });
-          console.log(response)
           if(response.length == 0){
             var favoriteData = new favourite(req.body)
             favoriteData.save()
           }else{
             await favourite.deleteOne({
-                $and: [{ song: req.body.son }, { user: req.body.user }],
+                $and: [{ song: req.body.song }, { user: req.body.user }],
               })
           }
         res.sendStatus(200)
