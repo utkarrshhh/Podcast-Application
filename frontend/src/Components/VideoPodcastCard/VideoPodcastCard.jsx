@@ -24,6 +24,16 @@ export default function VideoPodcastCard(props) {
       setPause("pauseHidden")
     }
   }
+
+  const favHandler=async()=> {
+    const user=localStorage.getItem("id")
+    await fetch('/file/setfavourite',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({user,song:props.id})
+    });
+  }
+
   return (
     <div className="videoPodcast">
       <div className="videoImage">
@@ -86,6 +96,15 @@ export default function VideoPodcastCard(props) {
           </div>
           {/* {props.creator} */}
         </div>
+      </div>
+      <div className="videoFavourite" onClick={favHandler}>
+        {
+          props.isFav===true
+          ?
+          ("Marked as favourite")
+          :
+          ("Mark as favourite")
+        }
       </div>
     </div>
   )

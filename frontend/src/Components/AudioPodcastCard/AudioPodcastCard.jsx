@@ -35,6 +35,8 @@ export default function AudioPodcastCard(props) {
     // setFav("Marked as Favourite")
   }
 
+  console.log(JSON.stringify(props))
+
   return (
     <div className="audioPodcast">
       <div className="audioImage">
