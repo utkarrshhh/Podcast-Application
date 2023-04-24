@@ -1,20 +1,26 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 import "./AudioPodcastCard.css"
 
 export default function AudioPodcastCard(props) {
+  const [play,setPlay]=useState("playShow")
+  const [pause,setPause]=useState("pauseHidden")
   
   function play_pause(player) {
-    console.log("vinit")
+    // console.log("vinit")
     var myAudio = document.getElementById(player);
     if (myAudio==null){
       return
     }
     if (myAudio.paused) {
       myAudio.play();
+      setPlay("playHidden")
+      setPause("pauseShow")
     }
     else {
       myAudio.pause();
+      setPlay("playShow")
+      setPause("pauseHidden")
     }
   }
 
@@ -33,7 +39,7 @@ export default function AudioPodcastCard(props) {
           </div>
           <div className="audioLogo">
             <audio src={props.source} id={props.id}/>
-            <div onClick={()=>{
+            <div className={play} onClick={()=>{
               play_pause(props.id)
             }} height="67" width="67">
             <svg
@@ -48,6 +54,16 @@ export default function AudioPodcastCard(props) {
                 d="M45.6079 31.7679C46.9412 32.5377 46.9412 34.4622 45.6079 35.232L28.9461 44.8517C27.6128 45.6215 25.9461 44.6593 25.9461 43.1197L25.9461 23.8803C25.9461 22.3407 27.6128 21.3785 28.9461 22.1483L45.6079 31.7679Z"
                 fill="white"
               />
+            </svg>
+            </div>
+
+            <div className={pause} onClick={()=>{
+              play_pause(props.id)
+            }} height="67" width="67">
+            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle opacity="0.8" cx="20.6341" cy="20.6341" r="20.6341" fill="#FF9800"/>
+              <rect x="12" y="12" width="8" height="18" fill="#D9D9D9"/>
+              <rect x="22" y="12" width="8" height="18" fill="#D9D9D9"/>
             </svg>
             </div>
           </div>

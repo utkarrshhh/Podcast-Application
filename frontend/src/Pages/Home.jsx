@@ -24,8 +24,8 @@ export default function Home() {
         <SideBar />
         <div>
           <div>
-            <div className="nowPlayingHeader">Now Playing</div>
-            <NowPlaying/>
+            {/* <div className="nowPlayingHeader">Now Playing</div> */}
+            {/* <NowPlaying/> */}
             {/* <div className="nowPlayingHeader">Pick Up Where You Left Off</div> */}
             {/* <ContinueWatching/> */}
             <div className="nowPlayingHeader" id="BW">Bingeworthy Podcasts</div>

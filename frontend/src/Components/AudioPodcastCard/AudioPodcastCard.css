@@ -1,3 +1,11 @@
+.playShow,.pauseShow{
+    display: block;
+}
+
+.playHidden,.pauseHidden{
+    display: none;
+}
+
 .audioPodcast {
     /* position: absolute; */
     width: 526.04px;
