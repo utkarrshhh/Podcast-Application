@@ -20,6 +20,19 @@ async function sendUserSearch(req, res, next) {
         }else{
             tempData.fileurl = "/file/video/"+element._id
         }
+        try {
+          var response = await favourite.find({
+            $and: [{ song: element.id }, { user: req.params.id }],
+          });
+          if (response.length != 0) {
+            tempData.isfav = true;
+          } else {
+            tempData.isfav = false;
+          }
+        } catch (ex) {
+          console.log(ex);
+          tempData.isfav = false;
+        }
         resData.push(tempData)
     }
     res.json(resData)
