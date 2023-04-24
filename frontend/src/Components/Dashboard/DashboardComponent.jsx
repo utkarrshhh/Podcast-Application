@@ -15,7 +15,7 @@ export default function DashboardComponent() {
           const data=await fetch(`http://134.209.153.161:5000/file/user/${user}`)
           const json=await data.json();
           setPodcast(json)
-          if(json.length===0){
+          if(podcast.length===0){
             setHidden("hidden")
           }
           else{
