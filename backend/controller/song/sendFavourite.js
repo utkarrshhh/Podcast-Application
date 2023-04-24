@@ -14,6 +14,16 @@ async function sendUserSearch(req, res, next) {
         tempData.description = element.description
         tempData.author = element.author
         tempData.category = element.category
+        if(element.category === "video"){
+          var filepath = path.join(__dirname,"../../assets/video/",element.filename)
+          var duration = await getVideoDurationInSeconds(filepath)
+          finaldur = `${parseInt(duration/60)}:${Math.round(duration-(parseInt(duration/60)*60))}`
+        }else{
+          var filepath = path.join(__dirname,"../../assets/music/",element.filename)
+          var duration = await getAudioDurationInSeconds(filepath)
+          finaldur = `${parseInt(duration/60)}:${Math.round(duration-(parseInt(duration/60)*60))}`
+        }
+        tempData.time = finaldur
         tempData.thumbnail = "/file/thumbnail/"+element._id
         if(element.category === "audio"){
             tempData.fileurl = "/file/audio/"+element._id
