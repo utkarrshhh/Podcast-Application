@@ -21,7 +21,7 @@ async function sendUserSearch(req, res, next) {
             tempData.fileurl = "/file/video/"+element._id
         }
         try {
-          var response = await favourite.find({
+          var response = await favsongs.find({
             $and: [{ song: element.id }, { user: req.params.id }],
           });
           if (response.length != 0) {
