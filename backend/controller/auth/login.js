@@ -4,15 +4,15 @@ async function login(req, res, next) {
   try {
     const loginData = req.body;
     var userResult = await userSchema.find({ email: loginData.email });
-    if (result[0].password === loginData.password) {
+    if (userResult[0].password === loginData.password) {
       var resData = {};
       var token = jwt.sign(
-        { id: result[0]._id, access: result[0].access },
+        { id: userResult[0]._id, access: userResult[0].access },
         process.env.jwtKey
       );
       resData.token = token;
-      resData.userid = result[0]._id;
-      resData.email = result[0].email;
+      resData.userid = userResult[0]._id;
+      resData.email = userResult[0].email;
       console.log(req.body);
       return res.json(resData);
     }
