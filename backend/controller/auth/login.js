@@ -1,9 +1,9 @@
-const Schema = require("../../db/model/user");
+const userSchema = require("../../db/model/user");
 const jwt = require("jsonwebtoken");
 async function login(req, res, next) {
   try {
     const loginData = req.body;
-    var result = await Schema.find({ email: loginData.email });
+    var userResult = await userSchema.find({ email: loginData.email });
     if (result[0].password === loginData.password) {
       var resData = {};
       var token = jwt.sign(

@@ -1,2 +1,5 @@
 node_modules
-.env
+/assets/music/*
+/assets/video/*
+!/assets/music/error.mp3
+!/assets/video/error.mp4
