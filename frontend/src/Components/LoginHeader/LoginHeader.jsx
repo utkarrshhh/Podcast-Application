@@ -14,7 +14,7 @@ const [email, setEmail]=useState('');
   const redirect=useNavigate();
 
   const fetchFunction = async () => {
-    const response=await fetch('/auth/login',{
+    const response=await fetch('http://134.209.153.161:5000/auth/login',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify({email,password})
