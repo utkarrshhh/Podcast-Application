@@ -3,6 +3,20 @@ import React from 'react'
 import "./AudioPodcastCard.css"
 
 export default function AudioPodcastCard(props) {
+
+  function play_pause(player) {
+    var myAudio = document.getElementById(player);
+    if (myAudio==null){
+      return
+    }
+    if (myAudio.paused) {
+      myAudio.play();
+    }
+    else {
+      myAudio.pause();
+    }
+  }
+
   return (
     <div className="audioPodcast">
       <div className="audioImage">
@@ -17,13 +31,14 @@ export default function AudioPodcastCard(props) {
             {props.heading}
           </div>
           <div className="audioLogo">
-            {/* <audio src=""> */}
+            <audio src={props.source} id={props.id}/>
             <svg
               width="67"
               height="67"
               viewBox="0 0 67 67"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              onClick={play_pause(props.id)}
             >
               <circle opacity="0.8" cx="33.5" cy="33.5" r="33.5" fill="#FF9800" />
               <path
@@ -31,7 +46,6 @@ export default function AudioPodcastCard(props) {
                 fill="white"
               />
             </svg>
-            {/* </audio> */}
           </div>
         </div>
         <div className="audioSubheading">

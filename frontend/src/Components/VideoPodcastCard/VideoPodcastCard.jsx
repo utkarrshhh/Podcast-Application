@@ -3,6 +3,16 @@ import React from 'react'
 import "./VideoPodcastCard.css"
 
 export default function VideoPodcastCard(props) {
+  // function play_pause(player) {
+  //   var myAudio = document.getElementById(player);
+  //   if (myAudio.paused) {
+  //     myAudio.play();
+  //   }
+  //   else {
+  //     myAudio.pause();
+  //   }
+  // }
+
   return (
     <div className="videoPodcast">
       <div className="videoImage">
