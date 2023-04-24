@@ -19,7 +19,7 @@ export default function SideBar() {
     <div className='sidebar'>
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/home">Home</Link>
-        <Link to="">Favourites</Link>
+        <Link to="/fav">Favourites</Link>
         <Link to="/" onClick={handleLogout}>Logout</Link>
     </div>
   )

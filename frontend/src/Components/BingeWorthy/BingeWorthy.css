@@ -1,7 +1,14 @@
+.bingeWorthy{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .bingeWorthy .elementsOfCarousel {
     margin-top: 30px;
     width: auto;
     height: 370px;
+    padding-right: 10px ;
 }
 
 .bingeWorthy .audioPodcast,
