@@ -13,7 +13,7 @@ export default function SignUpHeader() {
   const redirect=useNavigate();
 
   const fetchFunction = async () => {
-    const response=await fetch('/auth/register',{
+    const response=await fetch('http://134.209.153.161:5000/auth/register',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify({email,password,access:0})

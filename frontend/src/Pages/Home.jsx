@@ -12,7 +12,7 @@ export default function Home() {
   const [podcast,setPodcast]=useState([]);
     useEffect(()=>{
       const fetchData =async()=>{
-          const data=await fetch(`/file/topcharts/${userid}`)
+          const data=await fetch(`http://134.209.153.161:5000/file/topcharts/${userid}`)
           const json=await data.json();
           setPodcast(json)
       }

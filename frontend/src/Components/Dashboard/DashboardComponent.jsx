@@ -12,7 +12,7 @@ export default function DashboardComponent() {
     const user=localStorage.getItem("id");
     useEffect(()=>{
       const fetchData =async()=>{
-          const data=await fetch(`/file/user/${user}`)
+          const data=await fetch(`http://134.209.153.161:5000/file/user/${user}`)
           const json=await data.json();
           setPodcast(json)
           if(podcast.length===0){

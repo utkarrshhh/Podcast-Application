@@ -7,10 +7,7 @@ export default function SearchPage() {
     <>
     <NavBar />
     <div className="search-results">
-        
-
-        <SearchResults />
-
+    <SearchResults />
     </div>
     </>
   );

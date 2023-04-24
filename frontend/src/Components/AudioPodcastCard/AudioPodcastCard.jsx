@@ -27,7 +27,7 @@ export default function AudioPodcastCard(props) {
 
   const favHandler=async()=> {
     const user=localStorage.getItem("id")
-    await fetch('/file/setfavourite',{
+    await fetch('http://134.209.153.161:5000/file/setfavourite',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify({user,song:props.id})
