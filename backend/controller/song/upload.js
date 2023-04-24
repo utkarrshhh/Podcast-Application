@@ -1,6 +1,5 @@
 const songs = require("../../db/model/songs");
 async function upload(req, res, next) {
-  console.log(req.files.file);
   var uploadData = {};
   uploadData.filename = req.files.file[0].filename;
   uploadData.name = req.body.name;

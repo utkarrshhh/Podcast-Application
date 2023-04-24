@@ -8,29 +8,29 @@
     <title>Document</title>
 </head>
 
-<>
-    <audio controls id="aud" fileid="64454d8fc47f0bbbdbed2c33">
-        <source src="http://127.0.0.1:5000/file/audio/644478a0132bbf2fb8c23dd7" type="audio/mpeg">
-        Your browser does not support the player element.
-    </audio>
-    <video controls id="player" fileid="644476712766cc6586a3872e" width="300" height="300">
-        <source src="http://127.0.0.1:5000/file/video/644476712766cc6586a3872e" type="video/mp4">
-        Your browser does not support the player element.
-    </video>
-    <img src="http://127.0.0.1:5000/file/thumbnail/64454fc645f946b3ad2fb16c" alt="" width ="300" height="300">
-    <br>
-    <form action="http://127.0.0.1:5000/file/upload" method="post" enctype="multipart/form-data">
-        <input type="text" name="name" placeholder="name" required>
-        <input type="text" name="description" placeholder="description" required>
-        <input type="text" name="author" placeholder="author" required>
-        <select name="category" required>
-            <option value="audio">Audio</option>
-            <option value="video">Video</option>
-        </select>
-        <input type="file" name="file" required>
-        <input type="file" name="thumbnail" required>
-        <Button type="submit">Upload</Button>
-    </form>
+<audio controls id="aud" fileid="6446684327be1f8e8ce266e2">
+    <source src="http://127.0.0.1:5000/file/audio/6446684327be1f8e8ce266e2" type="audio/mpeg">
+    Your browser does not support the player element.
+</audio>
+<video controls id="player" fileid="6446684327be1f8e8ce266e2" width="300" height="300">
+    <source src="http://127.0.0.1:5000/file/video/6446684327be1f8e8ce266e2" type="video/mp4">
+    Your browser does not support the player element.
+</video>
+<img src="http://127.0.0.1:5000/file/thumbnail/6446684327be1f8e8ce266e2" alt="" width="300" height="300">
+<br>
+<form action="http://127.0.0.1:5000/file/upload" method="post" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="name" required>
+    <input type="text" name="description" placeholder="description" required>
+    <input type="text" name="author" placeholder="author" required>
+    <select name="category" required>
+        <option value="audio">Audio</option>
+        <option value="video">Video</option>
+    </select>
+    <input type="file" name="file" required>
+    <input type="file" name="thumbnail" required>
+    <input type="hidden" name="userid" value="vinit">   
+    <Button type="submit">Upload</Button>
+</form>
 </body>
 <script>
     var playing = false

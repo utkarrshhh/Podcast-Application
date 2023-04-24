@@ -4,6 +4,7 @@ const song = require("../../db/model/songs");
 async function sendfile(req, res, next) {
   try {
     var result = await song.findById(req.params.id);
+    console.log(result)
     result.played = result.played + 1;
     result.save();
     req.body.filename = result.filename;
@@ -18,10 +19,12 @@ function sendSong(req, res, next) {
     __dirname,
     "..\\..\\assets\\music\\" + req.body.filename
   );
+  console.log(file)
   if (!fs.existsSync(file))
     file = path.join(__dirname, "..\\..\\assets\\music\\error.mp3");
   var stat = fs.statSync(file);
   var total = stat.size;
+  console.log(total)
   if (req.headers.range) {
     var range = req.headers.range;
     var parts = range.replace(/bytes=/, "").split("-");
@@ -39,7 +42,6 @@ function sendSong(req, res, next) {
     });
     readStream.pipe(res);
   } else {
-    console.log(total)
     res.writeHead(200, {
       "Content-Length": total,
       "Content-Type": "audio/mpeg",

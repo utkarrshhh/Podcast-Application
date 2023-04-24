@@ -17,7 +17,6 @@ async function sendThumbnailFile(req, res, next) {
         __dirname,
         "..\\..\\assets\\music\\" + songData.thumbnail
       );
-      console.log(file)
     fs.readFile(file, function (err, content) {
       // Serving the image
       res.send(content);
