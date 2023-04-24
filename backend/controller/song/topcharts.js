@@ -10,7 +10,12 @@ async function getTop(req,res,next){
         tempData.description = element.description
         tempData.author = element.author
         tempData.category = element.category
-        tempData.thumbnail = element.thumbnail
+        tempData.thumbnail = "/file/thumbnail/"+element._id
+        if(element.category === "audio"){
+            tempData.fileurl = "/file/audio/"+element._id
+        }else{
+            tempData.fileurl = "/file/video/"+element._id
+        }
         resData.push(tempData)
     }
     res.json(resData)

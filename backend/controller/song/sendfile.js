@@ -39,6 +39,7 @@ function sendSong(req, res, next) {
     });
     readStream.pipe(res);
   } else {
+    console.log(total)
     res.writeHead(200, {
       "Content-Length": total,
       "Content-Type": "audio/mpeg",
