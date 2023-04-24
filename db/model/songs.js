@@ -9,6 +9,7 @@ const songData = new Schema({
   category: { type: String, required: true },
   user: { type: String, required: true },
   played: { type: Number, default: 0 },
+  thumbnail: { type: String, required: true },
 });
 
 module.exports = mongoose.model("songs", songData);

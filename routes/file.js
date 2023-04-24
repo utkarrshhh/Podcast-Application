@@ -1,10 +1,14 @@
 const router = require("express").Router();
 const sendfile = require("../controller/song/sendfile");
 const sendVideoFile = require("../controller/song/sendVideoFile");
+const sendThumbnailFile = require("../controller/song/sendThumbnailFile");
 const upload = require("../controller/song/upload");
+const duration = require("../controller/song/durationManager")
+const topcharts = require("../controller/song/topcharts")
 const multer = require("multer");
 const Path = require("path");
 const { v4: uuidv4 } = require("uuid");
+const formDataMiddleware = require("express").urlencoded({ extended: false });
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     if (req.body.category === "audio") {
@@ -18,15 +22,14 @@ const storage = multer.diskStorage({
     cb(null, filename);
   },
 });
-
 const uploadMulter = multer({ storage: storage });
 
-router.post("/duration", (req, res, next) => {
-  console.log(req.body);
-  res.send("ok");
-});
-const formDataMiddleware = require("express").urlencoded({ extended: false });
-router.post("/upload", formDataMiddleware, uploadMulter.single("file"), upload);
+
+router.post("/duration", duration);
+router.post("/upload", formDataMiddleware, uploadMulter.fields([{name:'file',maxCount:1},{name:'thumbnail',maxCount:1}]), upload);
+
 router.get("/audio/:id", sendfile);
 router.get("/video/:id", sendVideoFile);
+router.get("/thumbnail/:id", sendThumbnailFile);
+router.get("/topcharts",topcharts)
 module.exports = router;

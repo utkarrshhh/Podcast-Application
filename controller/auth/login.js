@@ -8,8 +8,7 @@ async function login(req,res,next){
             var resData = {}
             var token = jwt.sign({id:result[0]._id,access:result[0].access},process.env.jwtKey)
             resData.token = token
-            resData.userid = userResult[0]._id 
-            resData
+            resData.userid = userResult[0]._id
             return res.json(resData)
         }
         throw "Invalid Credentials"
