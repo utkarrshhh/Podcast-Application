@@ -2,6 +2,7 @@ import React from 'react'
 import "./PodcastForm.css"
 
 export default function PodcastForm() {
+    const user=localStorage.getItem("id");
   return (
     <form className='podcastForm' action="/file/upload" method="post" enctype="multipart/form-data">
         <div className="podcastName">
@@ -31,6 +32,7 @@ export default function PodcastForm() {
             <label htmlFor="podcastThumbnailInput" className="podcastThumbnailLabel">Podcast Thumbnail</label>
             <input type="file" name='thumbnail' id='podcastThumbnailInput' accept='.jpg' />
         </div>
+        <input type="hidden" value={user} name="userid"/>
         <div className="podcastSubmit">
             <button type='submit'>Upload</button>
         </div>

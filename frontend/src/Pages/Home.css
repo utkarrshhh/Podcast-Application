@@ -4,7 +4,7 @@
     gap: 30px;
 }
 
-.nowPlayingHeader{
+.nowPlayingHeader,.dashboardRecent,.favHeading{
     width: 414px;
     height: 39px;
     font-family: 'Clash Display';
@@ -16,6 +16,34 @@
     align-items: center;
     /* margin-left: 30px; */
     color: #FF9800;
+}
+
+.dashboardRecent{
+    justify-content: space-between;
+    width: 1070px;
+}
+
+.dashboardUpload{
+    width: 209px;
+    height: 44px;
+}
+
+.dashboardUpload button{
+    background-color: transparent;
+    padding: 5px 23px;
+    border: 1px solid #FF9800;
+    border-radius: 74px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    cursor: pointer;
 }
 
 #BW{

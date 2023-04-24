@@ -22,6 +22,7 @@
 .bingeWorthy .audioCard,
 .bingeWorthy .videoCard {
     background-color: transparent;
+    width: auto;
 }
 
 .bingeWorthy .audioText,

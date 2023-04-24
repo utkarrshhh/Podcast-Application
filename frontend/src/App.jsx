@@ -13,6 +13,7 @@ import Form from './Pages/Form';
 import { AuthContext } from "./Components/Context/Context.jsx";
 
 import "./App.css"
+import Favourite from './Pages/Favourite';
 
 export default function App() {
   const authContextValue=useContext(AuthContext);
@@ -38,6 +39,7 @@ export default function App() {
             {authContextValue.loggedIn && (<Route path="/form" element={<Form/>}/>)}
             {authContextValue.loggedIn && (<Route path="/home" element={<Home/>}/>)}
             {authContextValue.loggedIn && (<Route path="/dashboard" element={<Dashboard/>}/>)}
+            {authContextValue.loggedIn && (<Route path="/fav" element={<Favourite/>}/>)}
           </Routes>
           <Footer />
       </BrowserRouter>

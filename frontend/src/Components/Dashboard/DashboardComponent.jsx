@@ -1,10 +1,12 @@
 import React from 'react'
-
-import "./DashboardComponent.css"
 import { Link } from 'react-router-dom'
+
+import BingeWorthy from "../BingeWorthy/BingeWorthy"
+import "./DashboardComponent.css"
 
 export default function DashboardComponent() {
   return (
+    <>
     <div className='dashboardComponent'>
       <div className="dashboardContent">
         <div className="dashboardIcon">
@@ -23,6 +25,8 @@ export default function DashboardComponent() {
         </div>
       </div>
     </div>
+    <BingeWorthy/>
+    </>
   )
 }
 

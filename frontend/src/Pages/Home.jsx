@@ -7,9 +7,10 @@ import NowPlaying from "../Components/NowPlayingComponent/NowPlaying";
 import BingeWorthy from "../Components/BingeWorthy/BingeWorthy";
 
 export default function Home() {
+  const user=localStorage.getItem("email")
   return (
     <div className="home">
-      <NavBarHome title="Admin" />
+      <NavBarHome title={user} />
       <div className="flex">
         <SideBar />
         <div>
