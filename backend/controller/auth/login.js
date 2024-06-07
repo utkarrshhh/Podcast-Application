@@ -3,6 +3,9 @@ const jwt = require("jsonwebtoken");
 async function login(req, res, next) {
   try {
     const loginData = req.body;
+    if(loginData.email == undefined){
+      throw "email not found in request"
+    }
     var userResult = await userSchema.find({ email: loginData.email });
     if (userResult[0].password === loginData.password) {
       var resData = {};
