@@ -18,7 +18,7 @@ export default function LoginHeader() {
     const response = await axios.post("/auth/login", { email, password });
     const json = response.data;
 
-    if (response.ok) {
+    if (response.status == 200) {
       authContextValue.email = email;
       setError(json.error);
       if (!json.error) {
@@ -33,7 +33,7 @@ export default function LoginHeader() {
       }
     }
 
-    if (!response.ok) {
+    if (!response.status == 200) {
       console.log("blahb;ah");
       setError(error);
       authContextValue.setLoggedIn(false);

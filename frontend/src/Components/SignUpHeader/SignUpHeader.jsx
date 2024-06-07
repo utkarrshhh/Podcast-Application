@@ -19,7 +19,7 @@ export default function SignUpHeader() {
       redirect("/login");
     }
 
-    if (!response.ok) {
+    if (!response.status == 200) {
       setError(error);
     }
   };
