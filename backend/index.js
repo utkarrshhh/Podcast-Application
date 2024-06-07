@@ -18,6 +18,7 @@ dbcon()
 //router
 app.use("/auth",auth_router)
 app.use("/file",file_router)
+app.use("/health",(req,res)=>res.sendStatus(200))
 app.use(error.error)
 
 app.listen(process.env.port,()=>{
