@@ -3,3 +3,4 @@ node_modules
 /assets/video/*
 !/assets/music/error.mp3
 !/assets/video/error.mp4
+.env
