@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-It is currently Hosted In https://podcast-app.vercel.app/
+It is currently Hosted In https://podcast-app-1.vercel.app/
 
 ## Available Scripts
 
