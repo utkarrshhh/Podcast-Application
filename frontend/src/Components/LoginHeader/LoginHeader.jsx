@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/Context";
 
 import "./LoginHeader.css";
+import axios from "axios";
 
 export default function LoginHeader() {
   const [email, setEmail] = useState("");
@@ -14,12 +15,8 @@ export default function LoginHeader() {
   const redirect = useNavigate();
 
   const fetchFunction = async () => {
-    const response = await fetch("/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
-    const json = await response.json();
+    const response = await axios.post("/auth/login", { email, password });
+    const json = response.data;
 
     if (response.ok) {
       authContextValue.email = email;

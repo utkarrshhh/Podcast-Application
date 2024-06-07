@@ -7,13 +7,14 @@ import "./CarouselComponent.css";
 
 import AudioPodcastCard from "../AudioPodcastCard/AudioPodcastCard";
 import VideoPodcastCard from "../VideoPodcastCard/VideoPodcastCard";
+import axios from "axios";
 
 export default function SimpleSlider() {
   const [podcast, setPodcast] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch("/file/topcharts");
-      const json = await data.json();
+      const res = await axios.get("/file/topcharts");
+      const json = res.data;
       setPodcast(json);
     };
     fetchData();

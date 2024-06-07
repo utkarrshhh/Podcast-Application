@@ -14,6 +14,7 @@ import { AuthContext } from "./Components/Context/Context.jsx";
 
 import "./App.css"
 import Favourite from './Pages/Favourite';
+import axios from 'axios';
 
 export default function App() {
   const authContextValue=useContext(AuthContext);
@@ -26,7 +27,7 @@ export default function App() {
   //   localStorage.removeItem('token')
   //   localStorage.removeItem('email')
   // });
-
+  axios.defaults.baseURL = "https://podcast-application.onrender.com"
   return (
     <div className='bg'>
       <BrowserRouter>

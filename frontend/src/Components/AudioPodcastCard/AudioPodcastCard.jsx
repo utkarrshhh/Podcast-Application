@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import "./AudioPodcastCard.css";
+import axios from "axios";
 
 export default function AudioPodcastCard(props) {
   const [play, setPlay] = useState("playShow");
@@ -26,11 +27,7 @@ export default function AudioPodcastCard(props) {
 
   const favHandler = async () => {
     const user = localStorage.getItem("id");
-    await fetch("/file/setfavourite", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ user, song: props.id }),
-    });
+    await axios.post("/file/setfavourite", { user, song: props.id });
 
     window.location.reload(true);
 

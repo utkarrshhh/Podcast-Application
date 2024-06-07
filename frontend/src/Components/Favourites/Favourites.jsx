@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import FavCard from "./Cards/FavCard.jsx";
 
 import "./Favourites.css";
+import axios from "axios";
 
 export default function Favourites(props) {
   const user = localStorage.getItem("id");
@@ -10,8 +11,8 @@ export default function Favourites(props) {
   const [hidden, setHidden] = useState("fnotHidden");
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch(`/file/favourite/${user}`);
-      const json = await data.json();
+      const res = await axios.get(`/file/favourite/${user}`);
+      const json = res.data;
       await setPodcast(json);
       console.log(podcast);
       if (json.length === 0) {

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import DashboardPodcast from "../Dashboard/Cards/DashboardPodcast.jsx";
 import "./DashboardComponent.css";
+import axios from "axios";
 
 export default function DashboardComponent() {
   const [podcast, setPodcast] = useState([]);
@@ -11,8 +12,8 @@ export default function DashboardComponent() {
   const user = localStorage.getItem("id");
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch(`/file/user/${user}`);
-      const json = await data.json();
+      const res = await axios.get(`/file/user/${user}`);
+      const json = res.data;
       setPodcast(json);
       if (podcast.length === 0) {
         setHidden("hidden");

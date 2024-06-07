@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SignUpHeader.css";
+import axios from "axios";
 
 export default function SignUpHeader() {
   const [email, setEmail] = useState("");
@@ -12,13 +13,9 @@ export default function SignUpHeader() {
   const redirect = useNavigate();
 
   const fetchFunction = async () => {
-    const response = await fetch("/auth/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password, access: 0 }),
-    });
+    const response = await axios.post("/auth/register", { email, password, access: 0 });
 
-    if (response.ok) {
+    if (response.status == 200) {
       redirect("/login");
     }
 
